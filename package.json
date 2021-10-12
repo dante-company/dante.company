@@ -5,11 +5,25 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "preexport": "yarn build",
+    "export": "yarn preexport && next export",
+    "predeploy": "yarn export && cp CNAME out && touch out/.nojekyll",
+    "deploy": "yarn predeploy && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "next": "11.1.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "styled-components": "^5.3.1"
+  },
+  "homepage": "https://dante.company/",
+  "devDependencies": {
+    "@types/node": "^16.10.3",
+    "@types/react": "^17.0.28",
+    "@types/styled-components": "^5.1.15",
+    "babel-plugin-styled-components": "^1.13.2",
+    "gh-pages": "^3.2.3",
+    "typescript": "^4.4.3"
   }
 }
