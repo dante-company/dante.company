@@ -1,6 +1,6 @@
-import Head from "next/head";
-import { useEffect, useMemo, useState } from "react";
-import styled, { css } from "styled-components";
+import React from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import styled, { css } from 'styled-components';
 
 interface StringProps {
   borderWidth?: number;
@@ -13,10 +13,6 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(1.4);
 
   & > p {
     text-indent: 25px;
@@ -104,7 +100,7 @@ const String = styled.div<StringProps>`
   }
 `;
 
-const Home = () => {
+const DanteLogo = () => {
   const [degree, setDegree] = useState(0);
   const sine = useMemo(() => Math.sin((degree * Math.PI) / 180), [degree]);
 
@@ -135,4 +131,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default DanteLogo;
