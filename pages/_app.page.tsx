@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { createGlobalStyle } from 'styled-components';
 import { Reset } from 'styled-reset';
 import 'tailwindcss/tailwind.css';
+import { Footer } from '../components';
 import '../styles/globals.css';
 
 export const GlobalStyle = createGlobalStyle`
@@ -27,11 +28,14 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
       </Head>
-      <Component {...pageProps} />
+      <div className="font-sans">
+        <Component {...pageProps} />
+        <Footer />
+      </div>
     </>
   );
 };

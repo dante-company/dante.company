@@ -3,11 +3,13 @@ import tw from 'twin.macro';
 
 const Page = styled.div`
   ${tw`
+    // frame
+    w-full max-w-[900px]
+    p-[16px] m-auto
+
+    // font
     font-sans
-    w-full
-    max-w-[900px]
-    p-[16px]
-    m-auto
+    text-base
   `}
 `;
 

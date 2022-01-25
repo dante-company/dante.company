@@ -1,9 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import tw from 'twin.macro';
 
 const Center = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  ${tw`
+    flex flex-row justify-center
+  `}
 `;
 
 export default Center;
