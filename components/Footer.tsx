@@ -28,6 +28,18 @@ const Footer = () => {
             dev.1000ship@gmail.com
           </a>
         </div>
+        <div className="flex flex-row gap-4 text-sm text-gray-400">
+          <p>사업 소재지</p>
+          <p className="text-gray-600">
+            경기도 용인시 기흥구 동백중앙로 191, 8층 씨8124호(중동, 씨티프라자)
+          </p>
+        </div>
+        <div className="flex flex-row gap-4 text-sm text-gray-400">
+          <p>계좌</p>
+          <p className="text-gray-600">
+            카카오뱅크 <b className="font-medium">3333-20-4390215</b> 천성혁
+          </p>
+        </div>
       </div>
     </footer>
   );
