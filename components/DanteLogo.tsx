@@ -41,6 +41,11 @@ const String = styled.div<StringProps>`
     align-items: center;
     padding: 0px;
     animation: border-width-animation 5s ease-in-out;
+
+    transition: transform 0.1s ease-in-out;
+    &:hover {
+      transform: translateY(-5px) rotate(5deg);
+    }
   }
 
   @keyframes border-width-animation {
@@ -115,7 +120,7 @@ const DanteLogo = () => {
     <Container>
       <String>
         <div className="word word-d"></div>
-        <div className="word word-a ">
+        <div className="word word-a">
           <div className="center-horizon"></div>
         </div>
         <div className="word word-n"></div>
