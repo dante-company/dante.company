@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { createGlobalStyle } from 'styled-components';
 import { Reset } from 'styled-reset';
 import 'tailwindcss/tailwind.css';
-import { Footer } from '../components';
+import { BackgroundParticles, Footer } from '../components';
 import '../styles/globals.css';
 
 export const GlobalStyle = createGlobalStyle`
@@ -35,6 +35,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <div className="font-sans">
         <Component {...pageProps} />
         <Footer />
+        <BackgroundParticles />
       </div>
     </>
   );
