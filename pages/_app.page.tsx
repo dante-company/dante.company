@@ -4,6 +4,7 @@ import { createGlobalStyle } from 'styled-components';
 import { Reset } from 'styled-reset';
 import 'tailwindcss/tailwind.css';
 import { BackgroundParticles, Footer } from '../components';
+import { Metadata } from '../constants/seo';
 import '../styles/globals.css';
 
 export const GlobalStyle = createGlobalStyle`
@@ -18,9 +19,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Reset />
       <GlobalStyle />
       <Head>
-        <title>Dante Company</title>
-        <meta name="description" content="Get software what you want." />
+        <Metadata />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="theme-color" content="#FFFFFF" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -32,6 +34,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           rel="stylesheet"
         />
       </Head>
+
       <div className="font-sans">
         <Component {...pageProps} />
         <Footer />
