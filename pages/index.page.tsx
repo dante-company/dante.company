@@ -29,12 +29,12 @@ const Home = () => {
       </Center>
 
       <Section>
-        <h2 className="text-center text-4xl font-thin m-8">Project</h2>
+        <h2 className="text-center text-4xl font-thin m-8">Projects</h2>
         <div className="flex flex-col md:flex-row gap-6">
           <img
             src="/images/projects/futuremeal.png"
             alt="Future Meal"
-            className="md:w-2/3 h-auto rounded"
+            className="md:w-2/3 h-auto rounded max-h-screen object-contain"
           />
 
           <div className="flex-1 flex flex-row md:flex-col gap-8 md:gap-12">
@@ -89,6 +89,49 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </Section>
+
+      <Section>
+        <h2 className="text-center text-4xl font-thin m-8">Contact me</h2>
+
+        <div className="my-8 flex flex-col gap-4">
+          <a href="tel:01023623778" className="text-2xl font-bold">
+            📞 010 - 2362 - 3778
+          </a>
+          <a
+            href="mailto:dev.1000ship@gmail.com"
+            className="text-2xl font-bold"
+          >
+            ✉️ dev.1000ship@gmail.com
+          </a>
+
+          {/* kakao */}
+          <a
+            href="http://qr.kakao.com/talk/uwVv3.I9yFvDpu27bkUM9Mi7KO0-"
+            className="text-2xl font-bold flex flex-row gap-2"
+          >
+            <img
+              src="/icons/kakao-talk.png"
+              alt="카카오톡"
+              width={32}
+              height={32}
+            />
+            1000ship
+          </a>
+        </div>
+
+        <ul className="rounded-xl shadow bg-gray-50 p-4">
+          <li>
+            ReactJS, NextJS 컴포넌트{' '}
+            <span className="text-sm text-gray-400">
+              (캘린더 UI, 스마트에디터 UI)
+            </span>{' '}
+            단위 개발
+          </li>
+          <li>B2B 웹 서비스 / 어드민 페이지 개발</li>
+          <li>OAuth2.0 인증서버 개발</li>
+          <li>...</li>
+        </ul>
       </Section>
     </Page>
   );
