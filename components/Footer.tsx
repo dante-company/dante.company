@@ -22,10 +22,10 @@ const Footer = () => {
         <div className="flex flex-row gap-4 text-sm text-gray-400">
           <p>이메일</p>
           <a
-            href="mailto:dev.1000ship@gmail.com"
+            href="mailto:contact@dante.company"
             className="text-gray-900 font-medium"
           >
-            dev.1000ship@gmail.com
+            contact@dante.company
           </a>
         </div>
         <div className="flex flex-row gap-4 text-sm text-gray-400">

@@ -98,11 +98,8 @@ const Home = () => {
           <a href="tel:01023623778" className="text-2xl font-bold">
             📞 010 - 2362 - 3778
           </a>
-          <a
-            href="mailto:dev.1000ship@gmail.com"
-            className="text-2xl font-bold"
-          >
-            ✉️ dev.1000ship@gmail.com
+          <a href="mailto:contact@dante.company" className="text-2xl font-bold">
+            ✉️ contact@dante.company
           </a>
 
           {/* kakao */}
