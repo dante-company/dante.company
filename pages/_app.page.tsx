@@ -18,21 +18,30 @@ export const GlobalStyle = createGlobalStyle`
 const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const callback: IntersectionObserverCallback = (entries) => {
-        entries.forEach((entry) => {
-          if (
-            entry.isIntersecting &&
-            !entry.target.classList.contains('motion-safe:animate-fadeIn')
-          ) {
-            entry.target.classList.add('motion-safe:animate-fadeIn');
-          }
-        });
-      };
+      // motion-safe:animate-fadeIn
+      // motion-safe:animate-horizontalExpand
+      ['fadeIn', 'horizontalExpand'].forEach((animation) => {
+        const callback: IntersectionObserverCallback = (entries) => {
+          entries.forEach((entry) => {
+            if (
+              entry.isIntersecting &&
+              !entry.target.classList.contains(`motion-safe:animate-${animation}`)
+            ) {
+              entry.target.classList.add(`motion-safe:animate-${animation}`);
+            }
+          });
+        };
 
-      const targets = document.querySelectorAll('.aos-fadeIn');
-      const observer = new IntersectionObserver(callback);
-      targets.forEach(function (target) {
-        observer.observe(target);
+        const targets = document.querySelectorAll(`.aos-${animation}`);
+        const observer = new IntersectionObserver(callback);
+        targets.forEach(function (target) {
+          if (animation === 'fadeIn') {
+            target.classList.add(`opacity-0`);
+          } else if (animation === 'horizontalExpand') {
+            target.classList.add(`scale-x-0`);
+          }
+          observer.observe(target);
+        });
       });
     }
   });
@@ -66,11 +75,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <meta name="theme-color" content="#FFFFFF" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"

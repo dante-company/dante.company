@@ -23,19 +23,18 @@ const Work: FC<WorkProps> = (props) => {
         autoPlay
         centerMode
         centerSlidePercentage={50}
+        autoFocus={false}
         showArrows={windowWidth >= 768}
         showThumbs={windowWidth >= 768}
         showStatus={false}
         showIndicators
+        infiniteLoop
         interval={3000}
         transitionTime={1000}
         className="-mx-[16px] w-screen md:w-2/3"
       >
         {(Array.isArray(image) ? image : [image]).map((image) => (
-          <div
-            key={image}
-            className="mx-2 h-auto max-h-screen object-contain py-2 shadow md:mx-4"
-          >
+          <div key={image} className="mx-2 my-2 h-auto max-h-screen object-contain shadow md:mx-4">
             <img src={image} alt="Future Meal" />
           </div>
         ))}
@@ -54,16 +53,14 @@ const Work: FC<WorkProps> = (props) => {
           <p className="text-xl font-light text-gray-400">{subtitle}</p>
         </a>
 
-        <div className="flex flex-col gap-4">
+        <div className="ml-4 flex flex-col gap-4 md:ml-0">
           {descriptions?.map(({ topic, content }) => (
-            <div key={topic} className="">
+            <div key={topic} className="aos-fadeIn">
               <div className="flex flex-row-reverse items-center gap-3 md:flex-row">
-                <div className="h-[1px] w-full shrink bg-gray-800" />
+                <div className="aos-horizontalExpand h-[1px] w-full shrink origin-left bg-gray-800 md:origin-right" />
                 <h4 className="flex-shrink-0 text-lg font-semibold">{topic}</h4>
               </div>
-              <p className="break-words text-left text-sm md:ml-8 md:text-right">
-                {content}
-              </p>
+              <p className="break-words text-left text-sm md:ml-8 md:text-right">{content}</p>
             </div>
           ))}
         </div>

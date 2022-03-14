@@ -50,10 +50,7 @@ const BackgroundParticles = () => {
           y: screenHeight / 2,
           dx: Math.random() * 8 - 4,
           r: 0,
-          dr:
-            (Math.PI / 180) *
-            (Math.random() * 2 + 1) *
-            (Math.random() > 0.5 ? 1 : -1),
+          dr: (Math.PI / 180) * (Math.random() * 2 + 1) * (Math.random() > 0.5 ? 1 : -1),
           size: Math.random() * 30 + 25,
           opacity: 0,
         });
@@ -61,8 +58,7 @@ const BackgroundParticles = () => {
 
       particles.forEach((particle) => {
         particle.x += particle.dx;
-        particle.y =
-          screenHeight / 2 + Math.sin(particle.r) * particle.size * 3;
+        particle.y = screenHeight / 2 + Math.sin(particle.r) * particle.size * 3;
         particle.r += particle.dr;
         particle.size *= 0.99;
         particle.dx *= 0.99;
@@ -95,7 +91,7 @@ const BackgroundParticles = () => {
   });
 
   return (
-    <div className="absolute left-0 top-0 -z-10 h-screen w-screen">
+    <div className="absolute left-0 top-0 -z-10 h-screen w-screen overflow-hidden">
       <div className="absolute -z-10 h-full w-full backdrop-blur-sm" />
       {particles.map((particle, index) => (
         <Particle

@@ -4,7 +4,7 @@ import Work from './partials/Work';
 
 const Section = styled.div`
   ${tw`
-    min-h-screen flex flex-col justify-center items-center
+    min-h-[500px] md:min-h-[600px] flex flex-col justify-center items-center
   `}
 `;
 
@@ -29,9 +29,11 @@ const Home = () => {
       </Center>
 
       <Section>
-        <h2 className="aos-fadeIn m-8 text-center text-4xl font-thin">Works</h2>
+        <div className="aos-fadeIn sticky top-0 z-10 w-screen bg-gradient-to-b from-white via-[#ffffffcc] to-transparent">
+          <h2 className="m-4 text-center text-3xl font-thin md:m-8 md:text-4xl">Works</h2>
+        </div>
 
-        <div className="flex flex-col gap-[200px] py-8">
+        <div className="flex flex-col gap-[150px] py-8 md:gap-[200px]">
           <Work
             title="퓨쳐밀"
             subtitle="Futuremeal"
@@ -44,8 +46,7 @@ const Home = () => {
             descriptions={[
               {
                 topic: '소개',
-                content:
-                  '식품 ORM/ODM을 위한 위탁자-수탁자 연결 플랫폼 B2B 사업',
+                content: '식품 ORM/ODM을 위한 위탁자-수탁자 연결 플랫폼 B2B 사업',
               },
               {
                 topic: '역할',
@@ -84,7 +85,7 @@ const Home = () => {
       </Section>
 
       <Section>
-        <h2 className="aos-fadeIn m-8 text-center text-4xl font-thin">
+        <h2 className="aos-fadeIn m-4 text-center text-3xl font-thin md:m-8 md:text-4xl">
           Contact me
         </h2>
 
