@@ -1,6 +1,6 @@
-import { useWindowSize } from '@react-hook/window-size';
-import { motion, useAnimationFrame } from 'framer-motion';
-import React, { FC, useState } from 'react';
+import { motion } from 'framer-motion';
+import React, { FC, useEffect, useState } from 'react';
+import { useWindowSize } from 'usehooks-ts';
 
 interface ParticleType {
   key: number;
@@ -25,7 +25,7 @@ const Particle: FC<ParticleProps> = (props) => {
 
   return (
     <motion.div
-      className="absolute bg-gray-300 rounded-full -z-20"
+      className="absolute -z-20 rounded-full bg-gray-300"
       style={{
         width: size,
         height: size,
@@ -38,10 +38,10 @@ const Particle: FC<ParticleProps> = (props) => {
 };
 
 const BackgroundParticles = () => {
-  const [screenWidth, screenHeight] = useWindowSize();
+  const { width: screenWidth, height: screenHeight } = useWindowSize();
   const [particles, setParticles] = useState<ParticleType[]>([]);
 
-  useAnimationFrame(() => {
+  const animationFrame = () => {
     setParticles((particles) => {
       if (particles.length < 20 && Math.random() < 0.05) {
         particles.push({
@@ -80,11 +80,23 @@ const BackgroundParticles = () => {
           ),
       );
     });
+  };
+
+  useEffect(() => {
+    var timeoutId: any = null;
+    if (typeof window !== 'undefined') {
+      timeoutId = setTimeout(animationFrame, 1000 / 60);
+    }
+    return () => {
+      if (timeoutId && typeof window !== 'undefined') {
+        clearTimeout(timeoutId);
+      }
+    };
   });
 
   return (
-    <div className="absolute left-0 top-0 w-screen h-screen -z-10">
-      <div className="absolute w-full h-full backdrop-blur-sm -z-10" />
+    <div className="absolute left-0 top-0 -z-10 h-screen w-screen">
+      <div className="absolute -z-10 h-full w-full backdrop-blur-sm" />
       {particles.map((particle, index) => (
         <Particle
           key={index}

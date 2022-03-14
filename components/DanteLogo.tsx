@@ -106,16 +106,6 @@ const String = styled.div<StringProps>`
 `;
 
 const DanteLogo = () => {
-  const [degree, setDegree] = useState(0);
-  const sine = useMemo(() => Math.sin((degree * Math.PI) / 180), [degree]);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setDegree((degree) => degree + 1);
-    }, 1000 / 60);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <Container>
       <String>

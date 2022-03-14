@@ -1,11 +1,13 @@
 import { DefaultSeo } from 'next-seo';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { useEffect } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { Reset } from 'styled-reset';
-import 'tailwindcss/tailwind.css';
 import { BackgroundParticles, Footer } from '../components';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../styles/globals.css';
+import 'tailwindcss/tailwind.css';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -14,6 +16,27 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const callback: IntersectionObserverCallback = (entries) => {
+        entries.forEach((entry) => {
+          if (
+            entry.isIntersecting &&
+            !entry.target.classList.contains('motion-safe:animate-fadeIn')
+          ) {
+            entry.target.classList.add('motion-safe:animate-fadeIn');
+          }
+        });
+      };
+
+      const targets = document.querySelectorAll('.aos-fadeIn');
+      const observer = new IntersectionObserver(callback);
+      targets.forEach(function (target) {
+        observer.observe(target);
+      });
+    }
+  });
+
   return (
     <>
       <Reset />

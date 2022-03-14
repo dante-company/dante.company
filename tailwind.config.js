@@ -5,10 +5,22 @@ module.exports = {
     fontFamily: {
       'sans': ['Noto Sans KR', 'Helvetica', 'Arial', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      animation: {
+        fadeIn: "fadeIn 0.7s ease-in forwards"
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0, transform: "translateY(40px)" },
+          "100%": { opacity: 1 }
+        }
+      }
+    },
   },
   variantes: {
-    extend: {}
+    extend: {
+      animation: ["motion-safe"]
+    }
   },
   plugins: [],
 }
