@@ -29,7 +29,7 @@ const Home = () => {
       </Center>
 
       <Section>
-        <div className="aos-fadeIn sticky top-0 z-10 w-screen bg-gradient-to-b from-white via-[#ffffffcc] to-transparent">
+        <div className="aos-fadeIn sticky top-0 z-10 w-screen bg-gradient-to-b from-white via-[#ffffffcc] to-[#ffffff00]">
           <h2 className="m-4 text-center text-3xl font-thin md:m-8 md:text-4xl">Works</h2>
         </div>
 
