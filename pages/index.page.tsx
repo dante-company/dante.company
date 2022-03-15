@@ -57,6 +57,7 @@ const Home = () => {
                 content: 'ReactJS, TypeScript, Strapi, AWS',
               },
             ]}
+            centerSlidePercentage={80}
           />
 
           <Work

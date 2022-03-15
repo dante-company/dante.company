@@ -11,10 +11,11 @@ interface WorkProps {
     topic: string;
     content: string;
   }[];
+  centerSlidePercentage?: number;
 }
 
 const Work: FC<WorkProps> = (props) => {
-  const { title, subtitle, image, url, descriptions } = props;
+  const { title, subtitle, image, url, descriptions, centerSlidePercentage = 50 } = props;
   const { width: windowWidth } = useWindowSize();
 
   return (
@@ -22,7 +23,7 @@ const Work: FC<WorkProps> = (props) => {
       <Carousel
         autoPlay
         centerMode
-        centerSlidePercentage={50}
+        centerSlidePercentage={centerSlidePercentage}
         autoFocus={false}
         showArrows={windowWidth >= 768}
         showThumbs={windowWidth >= 768}
