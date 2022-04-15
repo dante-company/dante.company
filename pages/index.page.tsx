@@ -33,7 +33,7 @@ const Home = () => {
           <h2 className="m-4 text-center text-3xl font-thin md:m-8 md:text-4xl">Works</h2>
         </div>
 
-        <div className="flex flex-col gap-[150px] py-8 md:gap-[200px]">
+        <div className="flex flex-col gap-[100px] py-8 md:gap-[150px]">
           <Work
             title="퓨쳐밀"
             subtitle="Futuremeal"
@@ -46,15 +46,15 @@ const Home = () => {
             descriptions={[
               {
                 topic: '소개',
-                content: '식품 ORM/ODM을 위한 위탁자-수탁자 연결 플랫폼 B2B 사업',
+                content: '식품 위탁 생산 플랫폼',
               },
               {
                 topic: '역할',
-                content: '개발 및 기획',
+                content: '개발, 공동운영',
               },
               {
                 topic: '사용기술',
-                content: 'ReactJS, TypeScript, Strapi, AWS',
+                content: 'NextJS, TypeScript, Strapi, AWS',
               },
             ]}
             centerSlidePercentage={80}
@@ -78,7 +78,32 @@ const Home = () => {
               },
               {
                 topic: '역할',
-                content: '개발 및 유지보수',
+                content: '개발',
+              },
+              {
+                topic: '사용기술',
+                content: 'NextJS, TypeScript, Spring Boot, Kotlin, AWS',
+              },
+            ]}
+          />
+
+          <Work
+            title="빙고코퍼레이션"
+            subtitle="Bingo Corporation"
+            image={[
+              '/images/projects/bingo-1.png',
+              '/images/projects/bingo-2.png',
+              '/images/projects/bingo-3.png',
+            ]}
+            url="https://bingocorp.kr"
+            descriptions={[
+              {
+                topic: '소개',
+                content: '커머스테크 법인회사 빙고코퍼레이션',
+              },
+              {
+                topic: '역할',
+                content: '개발 파트너',
               },
             ]}
           />
