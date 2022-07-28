@@ -2,25 +2,31 @@ name: CI
 
 on:
   push:
-    branches: [ production ]
+    branches: [production]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v2
+    strategy:
+      matrix:
+        node-version: [16.x]
 
-      - name: Install node_modules
-        uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: install
-          
+    steps:
+      - name: Checkout source code.
+        uses: actions/checkout@v2
+
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      - name: Install Dependencies
+        working-directory: ./
+        run: yarn
+
       - name: Build homepage
-        uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: predeploy
+        working-directory: ./
+        run: yarn predeploy
 
       - name: Deploy homepage
         uses: peaceiris/actions-gh-pages@v3
