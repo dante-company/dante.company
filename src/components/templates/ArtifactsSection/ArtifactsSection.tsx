@@ -43,7 +43,7 @@ const ArtifactsSection: FC = () => {
                 className="relative"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, delay: 0.5 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
               >
                 <img
                   src={images[0]}
@@ -58,7 +58,7 @@ const ArtifactsSection: FC = () => {
                 className="relative"
                 initial={{ opacity: 0, y: -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, delay: 0.8 }}
+                transition={{ duration: 0.6 }}
               >
                 <img
                   src={images[1]}
@@ -71,7 +71,7 @@ const ArtifactsSection: FC = () => {
                 className="relative"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, delay: 1.1 }}
+                transition={{ duration: 0.6 }}
               >
                 <img
                   src={images[2]}
@@ -86,7 +86,7 @@ const ArtifactsSection: FC = () => {
                 className="relative"
                 initial={{ opacity: 0, y: -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, delay: 1.4 }}
+                transition={{ duration: 0.6 }}
               >
                 <img
                   src={images[3]}
@@ -99,7 +99,7 @@ const ArtifactsSection: FC = () => {
                 className="relative"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, delay: 1.7 }}
+                transition={{ duration: 0.6 }}
               >
                 <img
                   src={images[4]}
