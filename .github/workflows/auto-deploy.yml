@@ -22,7 +22,7 @@ jobs:
 
       - name: Install Dependencies
         working-directory: ./
-        run: yarn
+        run: yarn install
 
       - name: Build homepage
         working-directory: ./

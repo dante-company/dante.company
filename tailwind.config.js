@@ -1,31 +1,22 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ["./{pages,components}/**/*.{js,jsx,ts,tsx}"],
-  content: [],
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
-    fontFamily: {
-      'sans': ['Noto Sans KR', 'Helvetica', 'Arial', 'sans-serif'],
-    },
     extend: {
-      animation: {
-        fadeIn: "fadeIn 1s ease-in-out forwards",
-        horizontalExpand: "horizontalExpand 1s ease-in-out forwards",
+      colors: {
+        "blossom": "#ff80b5",
+        "twilight": "#9089fc",
       },
-      keyframes: {
-        fadeIn: {
-          "0%": { opacity: 0 },
-          "100%": { opacity: 1 },
-        },
-        horizontalExpand: {
-          "0%": { transform: "scaleX(0)" },
-          "100%": { transform: "scaleX(1)" }
-        }
-      }
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
     },
-  },
-  variantes: {
-    extend: {
-      animation: ["motion-safe"]
-    }
   },
   plugins: [],
 }

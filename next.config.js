@@ -1,16 +1,14 @@
 /** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
 
-module.exports = {
-  reactStrictMode: true,
-  pageExtensions: ["page.ts", "page.tsx"],
-  webpackDevMiddleware: (config) => {
+  webpack: (config, options) => {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
     return config;
   },
-  // webpack: (config, { isServer }) => {
-  //   // Fixes packages that depend on fs/module module
-  //   if (!isServer) {
-  //     config.node = { fs: 'empty', module: 'empty' }
-  //   }
-  //   return config
-  // },
 }
+
+module.exports = nextConfig
