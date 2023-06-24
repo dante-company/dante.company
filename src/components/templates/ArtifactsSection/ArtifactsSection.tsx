@@ -2,22 +2,14 @@
 
 import { AnimatedTitle } from "@components/atoms";
 import { motion, useScroll } from "framer-motion";
-import Image from "next/image";
 import React, { FC } from "react";
-import {
-  CodingImage,
-  IdeaImage,
-  MobileImage,
-  SmartContractImage,
-  WebImage,
-} from "./images";
 
 const images = [
-  IdeaImage,
-  WebImage,
-  MobileImage,
-  SmartContractImage,
-  CodingImage,
+  "/images/artifacts-section/idea.jpg",
+  "/images/artifacts-section/web.jpg",
+  "/images/artifacts-section/mobile.jpg",
+  "/images/artifacts-section/smart-contract.jpg",
+  "/images/artifacts-section/coding.jpg",
 ];
 
 const ArtifactsSection: FC = () => {
@@ -53,7 +45,7 @@ const ArtifactsSection: FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 0.5 }}
               >
-                <Image
+                <img
                   src={images[0]}
                   alt=""
                   className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
@@ -68,7 +60,7 @@ const ArtifactsSection: FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 0.8 }}
               >
-                <Image
+                <img
                   src={images[1]}
                   alt=""
                   className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
@@ -81,7 +73,7 @@ const ArtifactsSection: FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 1.1 }}
               >
-                <Image
+                <img
                   src={images[2]}
                   alt=""
                   className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
@@ -96,7 +88,7 @@ const ArtifactsSection: FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 1.4 }}
               >
-                <Image
+                <img
                   src={images[3]}
                   alt=""
                   className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
@@ -109,7 +101,7 @@ const ArtifactsSection: FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 1.7 }}
               >
-                <Image
+                <img
                   src={images[4]}
                   alt=""
                   className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"

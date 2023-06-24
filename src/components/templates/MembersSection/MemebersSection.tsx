@@ -1,20 +1,14 @@
-import Image from "next/image";
-import {
-  DanteDarkImage,
-  DanteLightImage,
-  InstagramSvg,
-  LinkedInSvg,
-} from "./images";
 import { AnimatedTitle } from "@components/atoms";
+import { InstagramSvg, LinkedInSvg } from "./svgs";
 
 const MembersSection = () => {
   const people = [
     {
       name: "천성혁",
       aka: "Dante",
-      image: {
-        light: DanteLightImage,
-        dark: DanteDarkImage,
+      imageUrl: {
+        light: "/images/members-section/dante-light.jpg",
+        dark: "/images/members-section/dante-dark.jpg",
       },
       instagramUrl: "https://www.instagram.com/1000ship/",
       linkedinUrl: "https://www.linkedin.com/in/1000ship/",
@@ -52,19 +46,15 @@ const MembersSection = () => {
               key={person.name}
               className="flex flex-row lg:flex-col gap-4 lg:gap-2 pt-12"
             >
-              <Image
-                src={DanteLightImage}
-                width={200}
-                height={250}
-                className="flex-none rounded-2xl object-cover block dark:hidden"
+              <img
+                src={person.imageUrl.light}
                 alt=""
+                className="flex-none rounded-2xl object-cover block dark:hidden w-[200px] aspect-[4/5]"
               />
-              <Image
-                src={DanteDarkImage}
-                width={200}
-                height={250}
-                className="flex-none rounded-2xl object-cover hidden dark:block"
+              <img
+                src={person.imageUrl.dark}
                 alt=""
+                className="flex-none rounded-2xl object-cover hidden dark:block w-[200px] aspect-[4/5]"
               />
               <div className="max-w-xl flex-auto">
                 <div className="flex gap-2 items-center">
@@ -100,14 +90,6 @@ const MembersSection = () => {
           ))}
         </ul>
       </div>
-      {/* <iframe
-        width="560"
-        height="315"
-        src="https://nomadlist.com/@dantechun/embed"
-        scrolling="no"
-        frameBorder="0"
-        allowFullScreen
-      ></iframe> */}
     </div>
   );
 };

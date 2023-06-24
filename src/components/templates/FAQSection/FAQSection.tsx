@@ -148,7 +148,7 @@ const FAQSection = () => {
           href="mailto:contact@dante.company"
           className={classNames(
             "mx-auto flex gap-2 items-center mt-8 w-fit",
-            "px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/10 rounded"
+            "px-4 py-3 text-sm font-semibold text-black dark:text-white transition hover:bg-black/10 dark:hover:bg-white/10 rounded-lg"
           )}
         >
           <EnvelopeIcon className="w-4 h-4" />
