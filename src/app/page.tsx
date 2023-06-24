@@ -3,7 +3,6 @@ import {
   Footer,
   HeroSection,
   MembersSection,
-  SkillsSection,
   StatsSection,
   TimelineSection,
 } from "@components/templates";

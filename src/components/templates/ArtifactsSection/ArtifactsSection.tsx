@@ -1,8 +1,8 @@
 "use client";
 
 import { AnimatedTitle } from "@components/atoms";
-import { motion, useScroll } from "framer-motion";
-import React, { FC } from "react";
+import { motion } from "framer-motion";
+import { FC } from "react";
 
 const images = [
   "/images/artifacts-section/idea.jpg",
@@ -13,11 +13,8 @@ const images = [
 ];
 
 const ArtifactsSection: FC = () => {
-  const ref = React.useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ container: ref });
-
   return (
-    <div ref={ref} className="relative isolate -z-10">
+    <div className="relative isolate -z-10">
       <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
         <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-stretch">
           <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">

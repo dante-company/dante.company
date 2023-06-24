@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import "./globals.css";
 import { Noto_Sans } from "next/font/google";
+import classNames from "classnames";
 
 const font = Noto_Sans({
   weight: ["400", "500", "600", "700"],
@@ -55,7 +56,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className={font.className}>{children}</body>
+      <body className={classNames("overflow-x-hidden", font.className)}>
+        {children}
+      </body>
     </html>
   );
 }
