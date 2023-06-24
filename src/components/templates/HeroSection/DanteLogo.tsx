@@ -113,6 +113,7 @@ const String = styled.div<StringProps>`
 const DanteLogo = () => {
   return (
     <Container>
+      <h1 className="sr-only">Dante Company</h1>
       <String>
         <div className="word word-d"></div>
         <div className="word word-a">
