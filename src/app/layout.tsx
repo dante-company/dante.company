@@ -2,6 +2,7 @@ import { fallbackLocale, getMessages } from "@locales/index";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
+import { Metadata } from "next";
 
 const font = Noto_Sans({
   weight: ["400", "500", "600", "700"],
@@ -29,7 +30,13 @@ export async function generateMetadata() {
       { color: "#ffffff", media: "(prefers-color-scheme: light)" },
       { color: "#000000", media: "(prefers-color-scheme: dark)" },
     ],
-    alternates: { canonical: "https://dante.company" },
+    alternates: {
+      canonical: "https://dante.company",
+      languages: {
+        ko: "/ko",
+        en: "/en",
+      },
+    },
     openGraph: {
       title: t("metadata.title"),
       description: t("metadata.description"),
@@ -46,7 +53,7 @@ export async function generateMetadata() {
         },
       ],
     },
-  };
+  } as Metadata;
 }
 
 export default async function LocaleLayout({ children }: Props) {
