@@ -1,14 +1,5 @@
 import { getMessages, supportedLocales } from "@locales/index";
-import classNames from "classnames";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
-import { Noto_Sans } from "next/font/google";
-import "./globals.css";
-
-const font = Noto_Sans({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  preload: true,
-});
 
 interface Props {
   children: React.ReactNode;
@@ -21,7 +12,7 @@ export function generateStaticParams() {
   return supportedLocales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params: { locale } }: Props) {
+export async function generateMetadata({ params: { locale = "en" } }: Props) {
   const messages = await getMessages(locale);
   const t = createTranslator({ locale, messages });
 
@@ -61,11 +52,10 @@ export default async function LocaleLayout({
   params: { locale },
 }: Props) {
   const messages = await getMessages(locale);
-
   return (
     <html lang={locale}>
       <NextIntlClientProvider locale={locale} messages={messages}>
-        <body className={classNames(font.className)}>{children}</body>
+        <body>{children}</body>
       </NextIntlClientProvider>
     </html>
   );

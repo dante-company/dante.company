@@ -10,9 +10,9 @@ export const fallbackLocale: Locale = "en";
 export const supportedLocales: Locale[] = ["ko", "en"];
 
 export const processLocale = (locale: string): Locale => {
-  if (locale === "ko") {
+  if (locale.startsWith("ko")) {
     return "ko";
-  } else if (locale === "en") {
+  } else if (locale.startsWith("en")) {
     return "en";
   } else {
     return fallbackLocale;
