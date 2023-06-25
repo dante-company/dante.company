@@ -1,4 +1,5 @@
 import { getMessages, supportedLocales } from "@locales/index";
+import { Metadata } from "next";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
 
 interface Props {
@@ -22,19 +23,13 @@ export async function generateMetadata({ params: { locale = "en" } }: Props) {
       default: t("metadata.title"),
     },
     description: t("metadata.description"),
-    viewport: "width=device-width, initial-scale=1.0",
-    themeColor: [
-      { color: "#ffffff", media: "(prefers-color-scheme: light)" },
-      { color: "#000000", media: "(prefers-color-scheme: dark)" },
-    ],
-    alternates: { canonical: "https://dante.company" },
     openGraph: {
       title: t("metadata.title"),
       description: t("metadata.description"),
       url: "https://dante.company",
       siteName: t("metadata.title"),
       type: "website",
-      locale: "ko_KR",
+      locale: locale === "ko" ? "ko_KR" : locale === "en" ? "en_US" : "en_US",
       images: [
         {
           url: "https://dante.company/og/dante-company.png",
@@ -44,7 +39,7 @@ export async function generateMetadata({ params: { locale = "en" } }: Props) {
         },
       ],
     },
-  };
+  } as Metadata;
 }
 
 export default async function LocaleLayout({
