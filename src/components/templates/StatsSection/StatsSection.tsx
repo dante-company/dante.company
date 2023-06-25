@@ -3,32 +3,54 @@
 import { AnimatedTitle } from "@components/atoms";
 import { motion } from "framer-motion";
 import moment from "moment";
+import { useLocale, useTranslations } from "next-intl";
 import { FC } from "react";
 
-const stats = [
-  {
-    id: 1,
-    name: "지금까지 작업해온 일 수",
-    value: moment().diff(moment("2021-10-12"), "days").toLocaleString() + "일",
-  },
-  { id: 2, name: "지금까지 만난 거래처", value: "10 곳" },
-  { id: 3, name: "또 찾아주신 거래처", value: "7 곳" },
-  { id: 4, name: "지금까지 발생시킨 매출", value: "3억 원+" },
-];
-
 const StatsSection: FC = () => {
+  const t = useTranslations("landing");
+  const locale = useLocale();
+
+  const stats = [
+    {
+      id: 1,
+      name: t("StatsSection.workedDays"),
+      value:
+        // moment().diff(moment("2021-10-12"), "days").toLocaleString() + "일",
+        t("StatsSection.workedDaysValue", {
+          days: moment().diff(moment("2021-10-12"), "days").toLocaleString(),
+        }),
+    },
+    {
+      id: 2,
+      name: t("StatsSection.totalClients"),
+      value: t("StatsSection.clientsValue", { clients: 10 }),
+    },
+    {
+      id: 3,
+      name: t("StatsSection.returningClients"),
+      value: t("StatsSection.clientsValue", { clients: 7 }),
+    },
+    {
+      id: 4,
+      name: t("StatsSection.totalRevenue"),
+      value: t("StatsSection.revenueValue", {
+        revenue: locale === "ko" ? "3억 원" : "250K",
+      }),
+    },
+  ];
+
   return (
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="text-center">
             <AnimatedTitle align="center">
-              모든 것을 혼자서 스스로
+              {t("StatsSection.title")}
             </AnimatedTitle>
             <p className="break-keep mx-auto mt-4 text-sm leading-6 text-gray-600 dark:text-gray-300 md:max-w-[80%] md:text-base">
-              IT 기술이 필요한 국내, 해외 기업에 소프트웨어를 공급해오고 있어요
+              {t("StatsSection.descriptionPart1")}
               <br />
-              덕분에 다양한 기업과 소통하며 여러 경험을 쌓을 수 있었죠
+              {t("StatsSection.descriptionPart2")}
             </p>
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">

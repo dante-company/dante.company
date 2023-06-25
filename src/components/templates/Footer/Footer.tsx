@@ -1,36 +1,46 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import React, { FC } from "react";
 
 const Footer: FC = () => {
+  const t = useTranslations("common");
+
   return (
     <footer className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
       <div className="mt-8 flex flex-col items-center gap-1 text-xs leading-5 text-gray-500 dark:text-gray-100 md:order-1 md:mt-0">
-        <p>&copy; 2023 Dante Company, All rights reserved.</p>
+        <p>{t("Footer.copyright")}</p>
         <div className="flex gap-3">
           <p className="text-gray-600 dark:text-gray-300">
-            상호명 <strong className="font-medium">단테컴퍼니</strong>
+            {t("Footer.companyNameLabel")}{" "}
+            <strong className="font-medium">{t("Footer.companyName")}</strong>
           </p>
           <p className="text-gray-600 dark:text-gray-300">
-            사업자등록번호 <strong className="font-medium">102-07-93105</strong>
+            {t("Footer.businessRegistrationNumberLabel")}{" "}
+            <strong className="font-medium">
+              {t("Footer.businessRegistrationNumber")}
+            </strong>
           </p>
         </div>
         <p className="text-gray-600 dark:text-gray-300">
-          경기도 용인시 기흥구 동백중앙로 191, 8층 씨8124호 (중동, 씨티프라자)
+          {t("Footer.address")}
         </p>
         <div className="flex gap-3">
           <p className="text-gray-600 dark:text-gray-300">
-            대표자명 <strong className="font-medium">천성혁</strong>
+            {t("Footer.presidentNameLabel")}{" "}
+            <strong className="font-medium">{t("Footer.presidentName")}</strong>
           </p>
           <a
-            href="tel:01023623778"
+            href="tel:+821023623778"
             className="font-medium text-gray-900 dark:text-gray-50"
           >
-            010-2362-3778
+            {t("Footer.telephone")}
           </a>
           <a
-            href="mailto:contact@dante.company"
+            href={`mailto:${t("Footer.email")}`}
             className="font-medium text-gray-900 dark:text-gray-50"
           >
-            contact@dante.company
+            {t("Footer.email")}
           </a>
         </div>
       </div>

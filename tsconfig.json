@@ -20,7 +20,12 @@
       }
     ],
     "paths": {
+      "@locales": ["./src/locales/index"],
+      "@locales/*": ["./src/locales/*"],
+      "@components": ["./src/components/index"],
       "@components/*": ["./src/components/*"],
+      "@app": ["./src/app/index"],
+      "@app/*": ["./src/app/*"],
       "@/*": ["./src/*"]
     }
   },

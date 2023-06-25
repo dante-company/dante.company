@@ -1,11 +1,17 @@
+"use client";
+
 import { AnimatedTitle } from "@components/atoms";
 import { InstagramSvg, LinkedInSvg } from "./svgs";
+import { useLocale, useTranslations } from "next-intl";
+import { getLocale, getTranslations, getTranslator } from "next-intl/server";
 
 const MembersSection = () => {
+  const t = useTranslations("landing");
+
   const people = [
     {
-      name: "천성혁",
-      aka: "Dante",
+      name: t("MembersSection.name"),
+      aka: t("MembersSection.aka"),
       imageUrl: {
         light: "/images/members-section/dante-light.jpg",
         dark: "/images/members-section/dante-dark.jpg",
@@ -19,25 +25,26 @@ const MembersSection = () => {
     <div className="pt-24 pb-16 md:pt-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 flex justify-center gap-8 flex-col lg:flex-row">
         <div className="max-w-2xl xl:col-span-2">
-          <AnimatedTitle>자유로운 개발을 지향해요</AnimatedTitle>
+          <AnimatedTitle>{t("MembersSection.title")}</AnimatedTitle>
           <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 break-keep">
-            2007년 초등학생 때부터 플래시게임을 만들고 싶다는 생각에 시작한 첫
-            프로그래밍이 취미이자 특기가 되었어요. 분업화된 회사 업무보다는
-            가능한 모든 것을 스스로 만들어보자는 결심으로 2021년 대학 조기졸업과
-            동시에 개인사업자이자 개발자로 시작하게됐어요.
+            {t("MembersSection.firstParagraph")}
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 break-keep">
-            덕분에 지금은{" "}
-            <span className="text-gray-400 dark:text-gray-500">(자칭)</span>{" "}
-            디지털노마드로서 원하는 곳에서 원하는 시간에 원하는 일을 할 수 있게
-            되었어요. 저의 발자취를 보시고 싶다면{" "}
-            <a
-              href="https://nomadlist.com/@dantechun"
-              className="font-black underline cursor-pointer"
-            >
-              여기
-            </a>
-            를 눌러보세요!
+            {t.rich("MembersSection.secondParagraph", {
+              span: (children) => (
+                <span className="text-gray-400 dark:text-gray-500">
+                  {children}
+                </span>
+              ),
+              a: (children) => (
+                <a
+                  href="https://nomadlist.com/@dantechun"
+                  className="font-black underline cursor-pointer"
+                >
+                  {children}
+                </a>
+              ),
+            })}
           </p>
         </div>
         <ul role="list" className="-mt-12 space-y-12 divide-y divide-gray-200">

@@ -1,0 +1,50 @@
+{
+  "WelcomeSection": {
+    "welcomeMessage": "Welcome to Dante Company 👋",
+    "description1": "I'm addressing a wide range of development, from standard development tasks such as web development, mobile web app. And also smart contract and AI application development",
+    "description2": "I'm currently working on outsourcing development for income, but my goal is to create and operate my own games or services in the future."
+  },
+  "StatsSection": {
+    "workedDays": "Total days I've worked",
+    "totalClients": "Total clients I've met so far",
+    "returningClients": "Total clients I've met again",
+    "totalRevenue": "Total revenue I've earned so far",
+    "title": "Do everything by myself",
+    "descriptionPart1": "I've been supplying software labor to domestic and overseas companies.",
+    "descriptionPart2": "Thanks to that, I was able to communicate with various companies and gain various experiences.",
+    "workedDaysValue": "{days} days",
+    "clientsValue": "{clients} companies",
+    "revenueValue": "${revenue}+"
+  },
+  "MembersSection": {
+    "name": "Dante",
+    "aka": "Seong-hyeok Chun",
+    "title": "I prefer to work on my own pace",
+    "firstParagraph": "Since I was so young in 2007, the first programming I used to want to make a flash game, and it became as a hobby. Afterwards I started to be solopreneur developer in 2021 for make everything possible by myself, rather than divided company tasks.",
+    "secondParagraph": "Thanks to this, now I'm a digital-nomad <span>(just named it myself)</span> where I can do what I want, when I want, where I want. If you want to see my footsteps, <a>click here!</a> to check my journey."
+  },
+  "TimelineSection": {
+    "item1Name": "Started development",
+    "item1Description": "In the 'Web 1.0' era, I was fascinated by numerous flash games on the internet and just started programming to make something like that.",
+    "item2Name": "Entered Korea Digital Media High School",
+    "item2Description": "Not only I learned and experienced lots of things, but I also made tons of valuable relationships. I still keep in touch with them 🤝",
+    "item3Name": "Entered Hongik University",
+    "item3Description": "Before this, I had only accumulated knowledge at the Application level, but I could accumulate a little more low-level knowledge on this time.",
+    "item4Name": "Founded Dante Company",
+    "item4Description": "I started working as a solopreneur and a software developer after freelancing at some other companies that are 'Naver AI Lab' and 'Insomenia'. And it's still going on!"
+  },
+  "FaqSection": {
+    "title": "Contact us if you need help!",
+    "emailButtonText": "Got more questions?",
+    "faqs_0_question": "Are you open to employment?",
+    "faqs_0_answer": "<p>First of all, I'd like to thank everyone who offers me a job description. However, at the moment, I am not interested in employment!</p><p>I prefer a flexible working style in my own time and place, so I usually contract on a project-by-project basis with a set end date.</p>",
+    "faqs_1_question": "What are the benefits of working with you?",
+    "faqs_1_answer": "<p>The biggest advantage of solo development is minimizing the time wasted on communication and authority requests. Especially, smaller companies tend to prioritize producing products quickly for market validation, and in this case, working with me would be more satisfactory.</p><p>Even without full-time commitment, I am confident I can do the job faster and at a more reasonable cost than hiring a front-end and back-end full-time developer at average salary. 😎</p>",
+    "faqs_2_question": "What are the disadvantages of working with you?",
+    "faqs_2_answer": "<p>If you need responses to real-time requests or have long meeting times, working with me could be difficult. Unfortunately, like everyone else, I only have 24 hours a day 😢</p><p>I usually only have a remote meeting for 30 minutes to 1 hour per week, and points of discussion or plan requests are communicated asynchronously by message.</p>",
+    "faqs_3_question": "Do we need a designer?",
+    "faqs_3_answer": "<p>Work can be done perfectly fine even without a designer! I have worked on more projects without a designer so far. In these cases, I modify and use my own components and purchased UI templates appropriately. The page you are looking at now is created by me.</p><p>Rather, if you have a specific design in mind, the workload increases because publishing work is needed. Of course, if you need illustration work, you will need a designer!</p><p>If you point out what you like with a URL or captured image of another website, such as color or layout structure, it will communicate well with me!</p>",
+    "faqs_4_question": "Can you handle animation freely?",
+    "faqs_4_answer": "<p>That's a confident part. It depends on what animation you want, but generally, it's possible! If you express the feeling you want abstractly, I work by implementing it initially and gradually modifying it.</p>"
+  }
+}

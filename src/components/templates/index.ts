@@ -1,13 +1,13 @@
-import ArtifactsSection from './ArtifactsSection';
-import Footer from './Footer';
-import HeroSection from './HeroSection';
-import MembersSection from './MembersSection';
-import SkillsSection from './SkillsSection';
-import StatsSection from './StatsSection';
-import TimelineSection from './TimelineSection';
+import WelcomeSection from "./WelcomSection";
+import Footer from "./Footer";
+import HeroSection from "./HeroSection";
+import MembersSection from "./MembersSection";
+import SkillsSection from "./SkillsSection";
+import StatsSection from "./StatsSection";
+import TimelineSection from "./TimelineSection";
 
 export {
-  ArtifactsSection,
+  WelcomeSection,
   Footer,
   HeroSection,
   SkillsSection,

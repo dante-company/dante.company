@@ -2,6 +2,7 @@
 
 import { AnimatedTitle } from "@components/atoms";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { FC } from "react";
 
 const images = [
@@ -12,7 +13,9 @@ const images = [
   "/images/artifacts-section/coding.jpg",
 ];
 
-const ArtifactsSection: FC = () => {
+const WelcomeSection: FC = () => {
+  const t = useTranslations("landing");
+
   return (
     <div className="relative isolate -z-10">
       <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
@@ -20,17 +23,13 @@ const ArtifactsSection: FC = () => {
           <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
             <div className="sticky top-1/2 mt-24 -translate-y-1/2 transform">
               <AnimatedTitle>
-                1인 개발사, 단테컴퍼니에 오신 걸 환영해요! 👋
+                {t("WelcomeSection.welcomeMessage")}
               </AnimatedTitle>
               <p className="relative mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 sm:max-w-md lg:max-w-none break-keep">
-                웹 개발, 모바일 웹앱, 스마트 컨트랙트, AI 응용 개발 등 표준이
-                잡힌 개발 업무부터 잘 다루지 않는 기술까지 넓은 범위로 개발을
-                진행하고 있어요!
+                {t("WelcomeSection.description1")}
               </p>
               <p className="relative mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 sm:max-w-md lg:max-w-none break-keep">
-                지금은 소득을 위해 주로 외주 개발을 다루고 있지만, 훗날 내
-                것이라고 부를 수 있는 게임과 서비스를 만들어 운영하는 것을
-                목표로 하고 있답니다.
+                {t("WelcomeSection.description2")}
               </p>
             </div>
           </div>
@@ -113,4 +112,4 @@ const ArtifactsSection: FC = () => {
   );
 };
 
-export default ArtifactsSection;
+export default WelcomeSection;

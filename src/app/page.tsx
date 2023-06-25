@@ -1,27 +1,8 @@
-import {
-  ArtifactsSection,
-  Footer,
-  HeroSection,
-  MembersSection,
-  StatsSection,
-  TimelineSection,
-} from "@components/templates";
-import FAQSection from "@components/templates/FAQSection";
 import { NextPage } from "next";
+import { redirect } from "next/navigation";
 
 const MainPage: NextPage = () => {
-  return (
-    <div className="flex flex-col items-stretch">
-      <HeroSection />
-      <ArtifactsSection />
-      {/* <SkillsSection /> */}
-      <StatsSection />
-      <MembersSection />
-      <TimelineSection />
-      <FAQSection />
-      <Footer />
-    </div>
-  );
+  redirect("/ko");
 };
 
 export default MainPage;

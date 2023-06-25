@@ -1,40 +1,39 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import React, { FC } from "react";
 
-const timeline = [
-  {
-    name: "개발 시작",
-    description:
-      "Web 1.0 시절, 웹 상의 수 많은 플래시 게임을 보고 흥미를 느껴 개발을 시작했어요. ShiFT 카페로 열심히 활동했던 그 시절이 생각나네요. 😄",
-    date: "Oct 2007",
-    dateTime: "2007-10",
-  },
-  {
-    name: "한국디지털미디어고등학교 졸업",
-    description:
-      "정보올림피아드 전국대회 수상 실적 덕에 웹프로그래밍과로 진학했어요. 개발 관련 지식을 쌓고 경험하는 것은 물론 값진 인연들을 아주 많이 만났답니다.",
-    date: "Feb 2015",
-    dateTime: "2015-02",
-  },
-  {
-    name: "홍익대학교 졸업",
-    description:
-      "이전까지 Application 단의 지식만 쌓아왔다면 대학 졸업 이후로는 조금 더 Low-level 한 지식을 쌓을 수 있었어요.",
-    date: "Jul 2021",
-    dateTime: "2021-07",
-  },
-  {
-    name: "단테컴퍼니 설립",
-    description:
-      "Naver AI Lab, 인썸니아 회사에서 프리랜서로 일하다가 대학 졸업과 동시에 개인 사업자로 활동을 시작했어요. 그리고 지금도 진행중이죠!",
-    date: "Oct 2021",
-    dateTime: "2021-10",
-  },
-];
-
 const TimelineSection: FC = () => {
+  const t = useTranslations("landing");
+
+  const timeline = [
+    {
+      name: t("TimelineSection.item1Name"),
+      description: t("TimelineSection.item1Description"),
+      date: "Oct 2007",
+      dateTime: "2007-10",
+    },
+    {
+      name: t("TimelineSection.item2Name"),
+      description: t("TimelineSection.item2Description"),
+      date: "Mar 2012",
+      dateTime: "2012-03",
+    },
+    {
+      name: t("TimelineSection.item3Name"),
+      description: t("TimelineSection.item3Description"),
+      date: "Mar 2016",
+      dateTime: "2016-03",
+    },
+    {
+      name: t("TimelineSection.item4Name"),
+      description: t("TimelineSection.item4Description"),
+      date: "Oct 2021",
+      dateTime: "2021-10",
+    },
+  ];
+
   return (
     <div className="pb-24 sm:pb-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
