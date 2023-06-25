@@ -6,14 +6,14 @@
   },
   "StatsSection": {
     "workedDays": "Total days I've worked",
-    "totalClients": "Total clients I've met so far",
-    "returningClients": "Total clients I've met again",
+    "totalClients": "I've met clients so far",
+    "returningClients": "I've met clients again",
     "totalRevenue": "Total revenue I've earned so far",
     "title": "Do everything by myself",
     "descriptionPart1": "I've been supplying software labor to domestic and overseas companies.",
     "descriptionPart2": "Thanks to that, I was able to communicate with various companies and gain various experiences.",
     "workedDaysValue": "{days} days",
-    "clientsValue": "{clients} companies",
+    "clientsValue": "{clients} clients",
     "revenueValue": "${revenue}+"
   },
   "MembersSection": {
