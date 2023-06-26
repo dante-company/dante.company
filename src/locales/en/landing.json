@@ -18,7 +18,7 @@
   },
   "MembersSection": {
     "name": "Dante",
-    "aka": "Seong-hyeok Chun",
+    "aka": "",
     "title": "I prefer to work on my own pace",
     "firstParagraph": "Since I was so young in 2007, the first programming I used to want to make a flash game, and it became as a hobby. Afterwards I started to be solopreneur developer in 2021 for make everything possible by myself, rather than divided company tasks.",
     "secondParagraph": "Thanks to this, now I'm a digital-nomad <span>(just named it myself)</span> where I can do what I want, when I want, where I want. If you want to see my footsteps, <a>click here!</a> to check my journey."
@@ -36,7 +36,7 @@
   "FaqSection": {
     "title": "Contact us if you need help!",
     "emailButtonText": "Got more questions?",
-    "faqs_0_question": "Are you open to employment?",
+    "faqs_0_question": "Are you willing to get a regular job?",
     "faqs_0_answer": "<p>First of all, I'd like to thank everyone who offers me a job description. However, at the moment, I am not interested in employment!</p><p>I prefer a flexible working style in my own time and place, so I usually contract on a project-by-project basis with a set end date.</p>",
     "faqs_1_question": "What are the benefits of working with you?",
     "faqs_1_answer": "<p>The biggest advantage of solo development is minimizing the time wasted on communication and authority requests. Especially, smaller companies tend to prioritize producing products quickly for market validation, and in this case, working with me would be more satisfactory.</p><p>Even without full-time commitment, I am confident I can do the job faster and at a more reasonable cost than hiring a front-end and back-end full-time developer at average salary. 😎</p>",

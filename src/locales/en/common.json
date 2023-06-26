@@ -1,12 +1,12 @@
 {
   "Footer": {
     "copyright": "© 2023 Dante Company, All rights reserved.",
-    "companyNameLabel": "Company name",
+    "companyNameLabel": "",
     "companyName": "Dante Company",
     "businessRegistrationNumberLabel": "Tax No.",
     "businessRegistrationNumber": "102-07-93105",
     "address": "#191, Dongbaek-Joongang-ro (8th FL C8124), Giheung-gu, Yongin-si Gyeonggi-do Republic of Korea",
-    "presidentNameLabel": "Representative",
+    "presidentNameLabel": "",
     "presidentName": "Seong-hyeok Chun",
     "telephone": "+82 10 2362 3778",
     "email": "contact@dante.company"
