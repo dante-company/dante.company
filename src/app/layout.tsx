@@ -53,6 +53,14 @@ export async function generateMetadata() {
         },
       ],
     },
+    scripts: [
+      {
+        // Google Adsense
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3034636508464066",
+        async: true,
+        crossorigin: "anonymous",
+      },
+    ],
   } as Metadata;
 }
 
