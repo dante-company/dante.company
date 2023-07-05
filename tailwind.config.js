@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      zIndex: {
+        "header": 100,
+      },
       colors: {
         "blossom": "#ff80b5",
         "twilight": "#9089fc",

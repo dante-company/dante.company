@@ -1,6 +1,14 @@
+import { Header } from "@components/templates";
 import { getMessages, supportedLocales } from "@locales/index";
 import { Metadata } from "next";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
+import { Noto_Sans } from "next/font/google";
+
+const font = Noto_Sans({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  preload: true,
+});
 
 interface Props {
   children: React.ReactNode;
@@ -55,10 +63,14 @@ export default async function LocaleLayout({
   params: { locale },
 }: Props) {
   const messages = await getMessages(locale);
+
   return (
     <html lang={locale}>
       <NextIntlClientProvider locale={locale} messages={messages}>
-        <body>{children}</body>
+        <body className={font.className}>
+          <Header />
+          {children}
+        </body>
       </NextIntlClientProvider>
     </html>
   );

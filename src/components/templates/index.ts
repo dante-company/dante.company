@@ -5,8 +5,10 @@ import MembersSection from "./MembersSection";
 import SkillsSection from "./SkillsSection";
 import StatsSection from "./StatsSection";
 import TimelineSection from "./TimelineSection";
+import Header from "./Header";
 
 export {
+  Header,
   WelcomeSection,
   Footer,
   HeroSection,

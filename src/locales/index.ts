@@ -9,14 +9,13 @@ export type Locale = "ko" | "en";
 export const fallbackLocale: Locale = "en";
 export const supportedLocales: Locale[] = ["ko", "en"];
 
-export const processLocale = (locale: string): Locale => {
+export const processLocale = (locale: string): Locale | null => {
   if (locale.startsWith("ko")) {
     return "ko";
   } else if (locale.startsWith("en")) {
     return "en";
-  } else {
-    return fallbackLocale;
   }
+  return null;
 };
 
 export const getMessages = (locale: string) => {
@@ -24,6 +23,7 @@ export const getMessages = (locale: string) => {
     case "ko":
       return KoreanMessages;
     case "en":
+    default:
       return EnglishMessages;
   }
 };
