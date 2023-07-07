@@ -53,19 +53,19 @@ const Header: FC = () => {
   return (
     <div className="fixed inset-x-0 top-0 flex justify-between items-center z-header pt-2 md:pt-4 px-4 md:px-6">
       <div className="flex gap-6">
-        <Link href="/" className="tracking-tighter font-bold">
+        <Link href="/" className="tracking-tighter font-bold hidden md:block">
           DANTE COMPANY
         </Link>
         <ul className="flex gap-4">
           <li className="relative">
             {localizedPathname === "/" && (
-              <div className="w-1 h-1 rounded-full absolute left-1/2 -bottom-1 transform -translate-x-1/2 bg-white" />
+              <div className="w-1 h-1 rounded-full absolute left-1/2 -bottom-1 transform -translate-x-1/2 bg-twilight dark:bg-blossom" />
             )}
             <Link href="/">Home</Link>
           </li>
           <li className="relative">
             {localizedPathname === "/games" && (
-              <div className="w-1 h-1 rounded-full absolute left-1/2 -bottom-1 transform -translate-x-1/2 bg-white" />
+              <div className="w-1 h-1 rounded-full absolute left-1/2 -bottom-1 transform -translate-x-1/2 bg-twilight dark:bg-blossom" />
             )}
             <Link href="/games">Games</Link>
           </li>

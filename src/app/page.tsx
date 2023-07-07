@@ -46,7 +46,6 @@ const MainPage: NextPage = () => {
       <MembersSection />
       <TimelineSection />
       <FAQSection />
-      <Footer />
     </div>
   );
 };

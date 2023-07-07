@@ -1,5 +1,6 @@
-import { Header } from "@components/templates";
+import { Footer, Header } from "@components/templates";
 import { getMessages, supportedLocales } from "@locales/index";
+import classNames from "classnames";
 import { Metadata } from "next";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
 import { Noto_Sans } from "next/font/google";
@@ -67,9 +68,15 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <NextIntlClientProvider locale={locale} messages={messages}>
-        <body className={font.className}>
+        <body
+          className={classNames(
+            "min-h-screen w-full max-w-7xl mx-auto",
+            font.className
+          )}
+        >
           <Header />
           {children}
+          <Footer />
         </body>
       </NextIntlClientProvider>
     </html>
