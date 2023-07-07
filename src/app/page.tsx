@@ -39,7 +39,7 @@ const MainPage: NextPage = () => {
 
   return (
     <div className="flex flex-col items-stretch sr-only">
-      <HeroSection />
+      <HeroSection text="company" />
       <WelcomeSection />
       {/* <SkillsSection /> */}
       <StatsSection />

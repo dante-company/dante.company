@@ -1,5 +1,6 @@
 "use client";
 
+import { FC } from "react";
 import styled, { css } from "styled-components";
 
 interface StringProps {
@@ -110,7 +111,13 @@ const String = styled.div<StringProps>`
   }
 `;
 
-const DanteLogo = () => {
+interface Props {
+  text: string;
+}
+
+const DanteLogo: FC<Props> = (props) => {
+  const { text } = props;
+
   return (
     <Container>
       <h1 className="sr-only">Dante Company</h1>
@@ -127,7 +134,7 @@ const DanteLogo = () => {
           <div className="center-horizon"></div>
         </div>
       </String>
-      <p>COMPANY</p>
+      <p className="uppercase">{text}</p>
     </Container>
   );
 };

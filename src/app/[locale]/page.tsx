@@ -11,7 +11,7 @@ import { NextPage } from "next";
 const MainPage: NextPage = () => {
   return (
     <>
-      <HeroSection />
+      <HeroSection text="company" />
       <WelcomeSection />
       {/* <SkillsSection /> */}
       <StatsSection />

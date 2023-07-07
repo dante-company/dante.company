@@ -1,0 +1,20 @@
+{
+  "GamesSection": {
+    "title": "Getting ready for something new! 🏗️",
+    "intro": "This is a business for my self-realization. Rather than immediate monetary gain, I see it as a process to build my game world in the future. Here are the features of the game I want to create!",
+    "cards": {
+      "web3": {
+        "title": "Web3 technology",
+        "description": "I'm thinking of minting an NFT that can represent a brand of my own."
+      },
+      "realtime": {
+        "title": "Play in real-time",
+        "description": "Even if it's a simple game, I'd like to create a game that everyone can play in real time."
+      },
+      "share": {
+        "title": "Shareable things",
+        "description": "I want to make the things can be enjoyed with just one link (URL) without having to install."
+      }
+    }
+  }
+}

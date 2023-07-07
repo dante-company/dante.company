@@ -1,9 +1,8 @@
 "use client";
 
 import { AnimatedTitle } from "@components/atoms";
+import { useTranslations } from "next-intl";
 import { InstagramSvg, LinkedInSvg } from "./svgs";
-import { useLocale, useTranslations } from "next-intl";
-import { getLocale, getTranslations, getTranslator } from "next-intl/server";
 
 const MembersSection = () => {
   const t = useTranslations("landing");

@@ -3,12 +3,18 @@ import BackgroundParticles from "./BackgroundParticles";
 import BackgroundPolygon from "./BackgroundPolygon";
 import DanteLogo from "./DanteLogo";
 
-const HeroSection: FC = () => {
+interface Props {
+  text: string;
+}
+
+const HeroSection: FC<Props> = (props) => {
+  const { text } = props;
+
   return (
-    <section className="relative min-h-[80svh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[60svh] flex items-center justify-center overflow-hidden">
       <BackgroundPolygon />
       <BackgroundParticles />
-      <DanteLogo />
+      <DanteLogo text={text} />
     </section>
   );
 };
