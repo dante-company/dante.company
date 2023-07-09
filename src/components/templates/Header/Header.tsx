@@ -83,7 +83,7 @@ const Header: FC = () => {
           onChange={(e) => handleLanguageChange(e.target.value as Locale)}
         >
           <option value="en">English</option>
-          <option value="ko">한국어</option>
+          <option value="ko">🇰🇷 한국어</option>
         </select>
       </div>
     </div>
