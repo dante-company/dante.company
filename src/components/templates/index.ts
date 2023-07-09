@@ -6,6 +6,7 @@ import SkillsSection from "./SkillsSection";
 import StatsSection from "./StatsSection";
 import TimelineSection from "./TimelineSection";
 import Header from "./Header";
+import ComingSoonSection from "./ComingSoonSection";
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   StatsSection,
   TimelineSection,
   MembersSection,
+  ComingSoonSection,
 };

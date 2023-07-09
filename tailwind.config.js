@@ -11,8 +11,34 @@ module.exports = {
         "header": 100,
       },
       colors: {
-        "blossom": "#ff80b5",
-        "twilight": "#9089fc",
+        blossom: {
+          DEFAULT: "#ff80b5",
+          50: "#fff2f7",
+          100: "#ffe6f0",
+          200: "#ffcce1",
+          300: "#ffb3d3",
+          400: "#ff99c4",
+          500: "#ff80b5",
+          600: "#cc6691",
+          700: "#994d6d",
+          800: "#663348",
+          900: "#331a24",
+          950: "#1a0d12"
+        },
+        "twilight": {
+          DEFAULT: "#9089fc",
+          50: "#f7f7fe",
+          100: "#e9e7fe",
+          200: "#d3d0fe",
+          300: "#bcb8fd",
+          400: "#a6a1fd",
+          500: "#9089fc",
+          600: "#736eca",
+          700: "#565297",
+          800: "#3a3765",
+          900: "#1d1b32",
+          950: "#0d0b19"
+        }
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

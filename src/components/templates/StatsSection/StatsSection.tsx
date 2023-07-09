@@ -65,7 +65,7 @@ const StatsSection: FC = () => {
                   duration: 0.7,
                   delay: index * 0.2,
                 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.5 }}
               >
                 <dt className="text-sm font-semibold leading-6 text-gray-600 dark:text-gray-300">
                   {stat.name}

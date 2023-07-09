@@ -44,7 +44,7 @@ const TimelineSection: FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.3 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.5 }}
             >
               <time
                 dateTime={item.dateTime}
@@ -64,7 +64,7 @@ const TimelineSection: FC = () => {
                   initial={{ opacity: 0, scaleX: 0, originX: 0 }}
                   whileInView={{ opacity: 1, scaleX: 1, originX: 0 }}
                   transition={{ duration: 1.5, delay: index * 0.3 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, amount: 0.5 }}
                 />
               </time>
               <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-gray-50">
@@ -75,7 +75,7 @@ const TimelineSection: FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.3 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.5 }}
               >
                 {item.description}
               </motion.p>

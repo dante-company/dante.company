@@ -16,5 +16,9 @@
         "description": "I want to make the things can be enjoyed with just one link (URL) without having to install."
       }
     }
+  },
+  "CoomingSoonSection": {
+    "title": "<strong>Pencil Picker</strong>, stay tuned! 🎮",
+    "intro": "<strong>Pencil Picker</strong>, which will be Dante Games' first game, is being developed with thoughtfulness to be simple enough for anyone to enjoy, yet not become boring."
   }
 }

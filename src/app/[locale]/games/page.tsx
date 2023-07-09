@@ -1,4 +1,4 @@
-import { HeroSection } from "@components/templates";
+import { ComingSoonSection, HeroSection } from "@components/templates";
 import GamesSection from "@components/templates/GamesSection";
 import { NextPage } from "next";
 
@@ -7,6 +7,7 @@ const GamesPage: NextPage = () => {
     <>
       <HeroSection text="games" />
       <GamesSection />
+      <ComingSoonSection />
     </>
   );
 };

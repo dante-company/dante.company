@@ -3,8 +3,9 @@
 import { AnimatedTitle } from "@components/atoms";
 import { useTranslations } from "next-intl";
 import { InstagramSvg, LinkedInSvg } from "./svgs";
+import { FC } from "react";
 
-const MembersSection = () => {
+const MembersSection: FC = () => {
   const t = useTranslations("landing");
 
   const people = [
