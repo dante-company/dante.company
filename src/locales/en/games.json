@@ -24,7 +24,7 @@
   "NewsletterSection": {
     "heading": "Would you like to get updates?",
     "subHeading": "When there are new games or updates, we'll notify you via email.",
-    "notificationCheckEmail": "We just sent you a verification email. Please check it and click on the verification button! 😁",
+    "notificationCheckEmail": "I just sent you a verification email. Please check it and click on the verification button! 😁",
     "notificationError": "An unknown problem occurred! 😢",
     "buttonTryAgain": "Try Again",
     "emailPlaceholder": "Please enter your email",
