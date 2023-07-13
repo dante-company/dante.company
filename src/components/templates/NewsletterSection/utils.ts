@@ -16,7 +16,10 @@ export const getNewsletterErrorMessage = (error: any, locale: string) => {
   if (axios.isAxiosError(error)) {
     if (error.response?.data?.message) {
       const errorMessage = error.response.data.message;
-      if (Object.keys(KoreanErrorMessage).includes(error.response.data.message))
+      if (
+        locale === "ko" &&
+        Object.keys(KoreanErrorMessage).includes(error.response.data.message)
+      )
         return KoreanErrorMessage[
           errorMessage as keyof typeof KoreanErrorMessage
         ];
