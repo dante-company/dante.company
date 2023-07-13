@@ -32,7 +32,7 @@ const GamesSection: FC = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <AnimatedTitle size="lg">{t("GamesSection.title")}</AnimatedTitle>
-          <p className="mt-6 text-lg leading-8 text-gray-700 dark:text-gray-300 break-keep">
+          <p className="mt-6 break-keep text-lg leading-8 text-gray-700 dark:text-gray-300">
             {t("GamesSection.intro")}
           </p>
         </div>
@@ -44,13 +44,13 @@ const GamesSection: FC = () => {
               whileInView={{ scale: 1, y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: index * 0.25 }}
               viewport={{ once: true, amount: 0.5 }}
-              className="flex gap-x-4 rounded-xl bg-slate-50 dark:bg-white/5 p-6 ring-1 ring-black/10 ring-inset dark:ring-white/10"
+              className="flex gap-x-4 rounded-xl bg-slate-50 p-6 ring-1 ring-inset ring-black/10 dark:bg-white/5 dark:ring-white/10"
             >
               <card.icon
                 className="h-7 w-5 flex-none text-twilight dark:text-blossom"
                 aria-hidden="true"
               />
-              <div className="text-base leading-7 break-keep">
+              <div className="break-keep text-base leading-7">
                 <h3 className="font-semibold">{card.name}</h3>
                 <p className="mt-2 text-gray-700 dark:text-gray-300">
                   {card.description}

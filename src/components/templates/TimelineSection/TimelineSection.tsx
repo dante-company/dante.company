@@ -48,7 +48,7 @@ const TimelineSection: FC = () => {
             >
               <time
                 dateTime={item.dateTime}
-                className="flex items-center text-sm font-semibold leading-6 text-twilight dark:text-blossom whitespace-nowrap"
+                className="flex items-center whitespace-nowrap text-sm font-semibold leading-6 text-twilight dark:text-blossom"
               >
                 <svg
                   viewBox="0 0 4 4"
@@ -59,7 +59,7 @@ const TimelineSection: FC = () => {
                 </svg>
                 {item.date}
                 <motion.div
-                  className="h-px grow bg-twilight dark:bg-blossom ml-4"
+                  className="ml-4 h-px grow bg-twilight dark:bg-blossom"
                   aria-hidden="true"
                   initial={{ opacity: 0, scaleX: 0, originX: 0 }}
                   whileInView={{ opacity: 1, scaleX: 1, originX: 0 }}
@@ -71,7 +71,7 @@ const TimelineSection: FC = () => {
                 {item.name}
               </p>
               <motion.p
-                className="mt-1 text-base leading-7 text-gray-600 dark:text-gray-300 break-keep"
+                className="mt-1 break-keep text-base leading-7 text-gray-600 dark:text-gray-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.3 }}

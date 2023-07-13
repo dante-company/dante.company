@@ -35,10 +35,10 @@ const MainPage: NextPage = () => {
       const path = routes.join("/");
       navigator.replace(`/${locale}/${path}`);
     }
-  }, []);
+  }, [navigator, pathname]);
 
   return (
-    <div className="flex flex-col items-stretch sr-only">
+    <div className="sr-only flex flex-col items-stretch">
       <HeroSection text="company" />
       <WelcomeSection />
       {/* <SkillsSection /> */}

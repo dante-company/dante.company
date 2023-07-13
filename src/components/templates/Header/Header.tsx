@@ -6,8 +6,7 @@ import {
   processLocale,
   supportedLocales,
 } from "@locales";
-import classNames from "classnames";
-import { useLocale, useLocalizedRouter } from "next-intl";
+import { useLocale } from "next-intl";
 import Link from "next-intl/link";
 import { usePathname, useRouter } from "next/navigation";
 import { FC, useEffect, useMemo } from "react";
@@ -40,7 +39,7 @@ const Header: FC = () => {
       const target = `/${locale}/${path}`;
       if (!target.startsWith(pathname)) router.replace(target);
     }
-  }, []);
+  }, [pathname, router]);
 
   const handleLanguageChange = (targetLocale: Locale) => {
     const processedLocale = processLocale(targetLocale);
@@ -51,21 +50,21 @@ const Header: FC = () => {
   };
 
   return (
-    <div className="fixed inset-x-0 top-0 flex justify-between items-center z-header pt-2 md:pt-4 px-4 md:px-6">
+    <div className="fixed inset-x-0 top-0 z-header flex items-center justify-between px-4 pt-2 md:px-6 md:pt-4">
       <div className="flex gap-6">
-        <Link href="/" className="tracking-tighter font-bold hidden md:block">
+        <Link href="/" className="hidden font-bold tracking-tighter md:block">
           DANTE COMPANY
         </Link>
         <ul className="flex gap-4">
           <li className="relative">
             {localizedPathname === "/" && (
-              <div className="w-1 h-1 rounded-full absolute left-1/2 -bottom-1 transform -translate-x-1/2 bg-twilight dark:bg-blossom" />
+              <div className="absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-twilight dark:bg-blossom" />
             )}
             <Link href="/">Home</Link>
           </li>
           <li className="relative">
             {localizedPathname === "/games" && (
-              <div className="w-1 h-1 rounded-full absolute left-1/2 -bottom-1 transform -translate-x-1/2 bg-twilight dark:bg-blossom" />
+              <div className="absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-twilight dark:bg-blossom" />
             )}
             <Link href="/games">Games</Link>
           </li>
@@ -78,7 +77,7 @@ const Header: FC = () => {
         <select
           id="language"
           name="language"
-          className="h-full rounded-md border-0 bg-transparent p-2 text-gray-500 dark:text-gray-400 sm:text-sm outline-none appearance-none text-right"
+          className="h-full appearance-none rounded-md border-0 bg-transparent p-2 text-right text-gray-500 outline-none dark:text-gray-400 sm:text-sm"
           defaultValue={locale}
           onChange={(e) => handleLanguageChange(e.target.value as Locale)}
         >

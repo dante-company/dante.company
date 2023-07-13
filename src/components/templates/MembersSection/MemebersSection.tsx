@@ -22,14 +22,14 @@ const MembersSection: FC = () => {
   ];
 
   return (
-    <div className="pt-24 pb-16 md:pt-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 flex justify-center gap-8 flex-col lg:flex-row">
+    <div className="pb-16 pt-24 md:pt-32">
+      <div className="mx-auto flex max-w-7xl flex-col justify-center gap-8 px-6 lg:flex-row lg:px-8">
         <div className="max-w-2xl xl:col-span-2">
           <AnimatedTitle>{t("MembersSection.title")}</AnimatedTitle>
-          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 break-keep">
+          <p className="mt-6 break-keep text-lg leading-8 text-gray-600 dark:text-gray-300">
             {t("MembersSection.firstParagraph")}
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 break-keep">
+          <p className="mt-6 break-keep text-lg leading-8 text-gray-600 dark:text-gray-300">
             {t.rich("MembersSection.secondParagraph", {
               span: (children) => (
                 <span className="text-gray-400 dark:text-gray-500">
@@ -39,7 +39,7 @@ const MembersSection: FC = () => {
               a: (children) => (
                 <a
                   href="https://nomadlist.com/@dantechun"
-                  className="font-black underline cursor-pointer"
+                  className="cursor-pointer font-black underline"
                 >
                   {children}
                 </a>
@@ -51,20 +51,20 @@ const MembersSection: FC = () => {
           {people.map((person) => (
             <li
               key={person.name}
-              className="flex flex-row lg:flex-col gap-4 lg:gap-2 pt-12"
+              className="flex flex-row gap-4 pt-12 lg:flex-col lg:gap-2"
             >
               <img
                 src={person.imageUrl.light}
                 alt=""
-                className="flex-none rounded-2xl object-cover block dark:hidden w-[200px] aspect-[4/5]"
+                className="block aspect-[4/5] w-[200px] flex-none rounded-2xl object-cover dark:hidden"
               />
               <img
                 src={person.imageUrl.dark}
                 alt=""
-                className="flex-none rounded-2xl object-cover hidden dark:block w-[200px] aspect-[4/5]"
+                className="hidden aspect-[4/5] w-[200px] flex-none rounded-2xl object-cover dark:block"
               />
               <div className="max-w-xl flex-auto">
-                <div className="flex gap-2 items-center">
+                <div className="flex items-center gap-2">
                   <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-gray-50">
                     {person.name}
                   </h3>
@@ -72,23 +72,23 @@ const MembersSection: FC = () => {
                     {person.aka}
                   </p>
                 </div>
-                <ul role="list" className="flex mt-2">
+                <ul role="list" className="mt-2 flex">
                   <li>
                     <a
                       href={person.instagramUrl}
-                      className="text-gray-400 hover:text-gray-500 block hover:bg-blossom/10 dark:hover:bg-twilight/30 p-2 rounded-full transition"
+                      className="block rounded-full p-2 text-gray-400 transition hover:bg-blossom/10 hover:text-gray-500 dark:hover:bg-twilight/30"
                     >
                       <span className="sr-only">Instagram</span>
-                      <InstagramSvg className="dark:fill-twilight fill-blossom" />
+                      <InstagramSvg className="fill-blossom dark:fill-twilight" />
                     </a>
                   </li>
                   <li>
                     <a
                       href={person.linkedinUrl}
-                      className="text-gray-400 hover:text-gray-500 block hover:bg-blossom/10 dark:hover:bg-twilight/30 p-2 rounded-full transition"
+                      className="block rounded-full p-2 text-gray-400 transition hover:bg-blossom/10 hover:text-gray-500 dark:hover:bg-twilight/30"
                     >
                       <span className="sr-only">LinkedIn</span>
-                      <LinkedInSvg className="dark:fill-twilight fill-blossom" />
+                      <LinkedInSvg className="fill-blossom dark:fill-twilight" />
                     </a>
                   </li>
                 </ul>

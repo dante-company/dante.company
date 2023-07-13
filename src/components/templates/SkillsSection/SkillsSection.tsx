@@ -8,7 +8,7 @@ const SkillsSection: FC = () => {
         <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
           <div className="mx-auto w-full max-w-xl lg:mx-0">
             <AnimatedTitle>요즘에는 이런 것들을 씁니다</AnimatedTitle>
-            <p className="break-keep mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+            <p className="mt-6 break-keep text-lg leading-8 text-gray-600 dark:text-gray-300">
               디테일한 기술 스택은 저마다 다르겠지만 Typescript와 AWS를
               애용해요. 덕분에 새로 만나는 개발자들과도 소통이 원활한 편이죠.
             </p>

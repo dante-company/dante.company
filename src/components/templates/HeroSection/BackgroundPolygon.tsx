@@ -44,7 +44,7 @@ const BackgroundPolygon = () => {
       >
         {points?.length && (
           <div
-            className="bg-gradient-to-tr from-blossom to-twilight absolute inset-0 opacity-30 dark:opacity-40"
+            className="absolute inset-0 bg-gradient-to-tr from-blossom to-twilight opacity-30 dark:opacity-40"
             style={{
               clipPath: `polygon(${points
                 .map((point) => `${point.x * 100}% ${point.y * 100}%`)

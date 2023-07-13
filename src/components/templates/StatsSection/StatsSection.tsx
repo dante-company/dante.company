@@ -47,7 +47,7 @@ const StatsSection: FC = () => {
             <AnimatedTitle align="center">
               {t("StatsSection.title")}
             </AnimatedTitle>
-            <p className="break-keep mx-auto mt-4 text-sm leading-6 text-gray-600 dark:text-gray-300 md:max-w-[80%] md:text-base">
+            <p className="mx-auto mt-4 break-keep text-sm leading-6 text-gray-600 dark:text-gray-300 md:max-w-[80%] md:text-base">
               {t("StatsSection.descriptionPart1")}
               <br />
               {t("StatsSection.descriptionPart2")}
@@ -57,7 +57,7 @@ const StatsSection: FC = () => {
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.id}
-                className="flex flex-col bg-gray-400/5 dark:bg-gray-100/20 p-8"
+                className="flex flex-col bg-gray-400/5 p-8 dark:bg-gray-100/20"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{

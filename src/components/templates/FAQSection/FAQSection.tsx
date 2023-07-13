@@ -53,7 +53,7 @@ const FAQSection = () => {
                       </Disclosure.Button>
                     </dt>
                     <Disclosure.Panel as="dd" className="mt-2 pr-12">
-                      <div className="text-base leading-7 text-gray-600 dark:text-gray-300 break-keep space-y-2">
+                      <div className="space-y-2 break-keep text-base leading-7 text-gray-600 dark:text-gray-300">
                         {faq.answer}
                       </div>
                     </Disclosure.Panel>
@@ -71,7 +71,7 @@ const FAQSection = () => {
             "px-4 py-3 text-sm font-semibold text-black dark:text-white transition hover:bg-black/10 dark:hover:bg-white/10 rounded-lg"
           )}
         >
-          <EnvelopeIcon className="w-4 h-4" />
+          <EnvelopeIcon className="h-4 w-4" />
           <span>{t("FaqSection.emailButtonText")}</span>
         </a>
       </div>
