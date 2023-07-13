@@ -20,6 +20,10 @@
       }
     ],
     "paths": {
+      "@constants": ["./src/constants/index"],
+      "@constants/*": ["./src/constants/*"],
+      "@api": ["./src/api/index"],
+      "@api/*": ["./src/api/*"],
       "@locales": ["./src/locales/index"],
       "@locales/*": ["./src/locales/*"],
       "@components": ["./src/components/index"],

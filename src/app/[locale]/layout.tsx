@@ -23,7 +23,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params: { locale = "en" } }: Props) {
-  const messages = await getMessages(locale);
+  const messages = getMessages(locale);
   const t = createTranslator({ locale, messages });
 
   return {

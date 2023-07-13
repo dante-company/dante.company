@@ -10,5 +10,11 @@
     "presidentName": "Seong-hyeok Chun",
     "telephone": "+82 10 2362 3778",
     "email": "contact@dante.company"
+  },
+  "404": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for was moved, removed, renamed or might never existed.",
+    "buttonBack": "Go to Home",
+    "buttonContact": "Contact me via Email"
   }
 }

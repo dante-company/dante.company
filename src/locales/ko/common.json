@@ -10,5 +10,11 @@
     "presidentName": "천성혁",
     "telephone": "010-2362-3778",
     "email": "contact@dante.company"
+  },
+  "404": {
+    "title": "알 수 없는 경로에요.",
+    "description": "페이지가 삭제되었거나, 잘못된 경로로 접근하셨어요.",
+    "buttonBack": "홈으로 돌아가기",
+    "buttonContact": "이메일 문의하기"
   }
 }

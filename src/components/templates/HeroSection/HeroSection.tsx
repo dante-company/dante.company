@@ -11,7 +11,7 @@ const HeroSection: FC<Props> = (props) => {
   const { text } = props;
 
   return (
-    <section className="relative min-h-[60svh] flex items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-[60svh] items-center justify-center overflow-hidden">
       <BackgroundPolygon />
       <BackgroundParticles />
       <DanteLogo text={text} />

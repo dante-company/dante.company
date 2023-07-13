@@ -1,9 +1,9 @@
 import { fallbackLocale, getMessages } from "@locales/index";
+import { Metadata } from "next";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
-import { Metadata } from "next";
-import { Footer, Header } from "@components/templates";
+import Providers from "./providers";
 
 const font = Noto_Sans({
   weight: ["400", "500", "600", "700"],
@@ -71,9 +71,11 @@ export default async function LocaleLayout({ children }: Props) {
 
   return (
     <html lang={locale}>
-      <NextIntlClientProvider locale={locale} messages={messages}>
-        <body className={font.className}>{children}</body>
-      </NextIntlClientProvider>
+      <Providers>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <body className={font.className}>{children}</body>
+        </NextIntlClientProvider>
+      </Providers>
     </html>
   );
 }

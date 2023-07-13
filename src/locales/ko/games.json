@@ -20,5 +20,18 @@
   "CoomingSoonSection": {
     "title": "<strong>펜슬 피커</strong>, 기대해주세요! 🎮",
     "intro": "단테 게임즈의 첫 게임이 될 <strong>펜슬 피커</strong>는 누구나 쉽게 즐길 수 있을 정도로 간단하되, 어떻게하면 지루하지 않게 할 수 있을지 고민하며 만들고 있어요."
+  },
+  "NewsletterSection": {
+    "heading": "소식을 받아보시겠어요?",
+    "subHeading": "앞으로 새로운 게임이 나오거나 업데이트 사항이 있을때, 이메일로 알려드릴게요.",
+    "notificationCheckEmail": "지금 막 인증번호를 보냈어요. 메일함을 확인해주세요!",
+    "notificationError": "알 수 없는 문제가 발생했습니다! 😢",
+    "done": "뉴스레터 등록 완료! 🎉",
+    "buttonTryAgain": "다시 시도",
+    "emailPlaceholder": "이메일을 입력해주세요",
+    "emailErrorMessage": "올바른 메일 주소 형태가 아니에요!",
+    "confirmationCodePlaceholder": "인증코드를 입력해주세요",
+    "buttonSubscribe": "구독하기",
+    "buttonConfirm": "인증하기"
   }
 }

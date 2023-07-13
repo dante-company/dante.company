@@ -20,5 +20,18 @@
   "CoomingSoonSection": {
     "title": "<strong>Pencil Picker</strong>, stay tuned! 🎮",
     "intro": "<strong>Pencil Picker</strong>, which will be Dante Games' first game, is being developed with thoughtfulness to be simple enough for anyone to enjoy, yet not become boring."
+  },
+  "NewsletterSection": {
+    "heading": "Would you like to get updates?",
+    "subHeading": "When there are new games or updates, we'll notify you via email.",
+    "notificationCheckEmail": "We just sent you a verification email. Please check it and click on the verification button! 😁",
+    "notificationError": "An unknown problem occurred! 😢",
+    "buttonTryAgain": "Try Again",
+    "emailPlaceholder": "Please enter your email",
+    "emailErrorMessage": "This isn't a valid email format!",
+    "confirmationCodePlaceholder": "Please enter the code",
+    "buttonSubscribe": "Subscribe",
+    "buttonConfirm": "Confirm",
+    "done": "Done! 🎉"
   }
 }
