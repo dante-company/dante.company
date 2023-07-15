@@ -170,15 +170,6 @@ const NewsletterSection: FC = () => {
                   Email address
                 </label>
                 <input
-                  id="email-address"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  className="min-w-0 flex-auto rounded-md border-0 bg-black/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black/10 focus:ring-2 focus:ring-inset focus:ring-black disabled:opacity-50 dark:bg-white/5 dark:text-white dark:ring-white/10 dark:focus:ring-white sm:text-sm sm:leading-6"
-                  placeholder={t("NewsletterSection.emailPlaceholder")}
-                  size={30}
-                  minLength={5}
-                  maxLength={320}
                   {...register("email", {
                     required: true,
                     validate: (value) => {
@@ -187,6 +178,15 @@ const NewsletterSection: FC = () => {
                         : t("NewsletterSection.emailErrorMessage");
                     },
                   })}
+                  id="email-address"
+                  required
+                  className="min-w-0 flex-auto rounded-md border-0 bg-black/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black/10 focus:ring-2 focus:ring-inset focus:ring-black disabled:opacity-50 dark:bg-white/5 dark:text-white dark:ring-white/10 dark:focus:ring-white sm:text-sm sm:leading-6"
+                  placeholder={t("NewsletterSection.emailPlaceholder")}
+                  size={30}
+                  minLength={5}
+                  maxLength={320}
+                  type="email"
+                  autoComplete="email"
                   disabled={isRegisterLoading}
                 />
                 <button
