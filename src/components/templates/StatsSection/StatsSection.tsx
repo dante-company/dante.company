@@ -23,18 +23,18 @@ const StatsSection: FC = () => {
     {
       id: 2,
       name: t("StatsSection.totalClients"),
-      value: t("StatsSection.clientsValue", { clients: 10 }),
+      value: t("StatsSection.clientsValue", { clients: 11 }),
     },
     {
       id: 3,
       name: t("StatsSection.returningClients"),
-      value: t("StatsSection.clientsValue", { clients: 7 }),
+      value: t("StatsSection.clientsValue", { clients: 8 }),
     },
     {
       id: 4,
       name: t("StatsSection.totalRevenue"),
       value: t("StatsSection.revenueValue", {
-        revenue: locale === "ko" ? "3억 원" : "250K",
+        revenue: locale === "ko" ? "3.5억 원" : "270K",
       }),
     },
   ];
@@ -76,6 +76,9 @@ const StatsSection: FC = () => {
               </motion.div>
             ))}
           </dl>
+          <div className="mt-1 text-center text-xs text-gray-600">
+            *Stats updated at Nov 2023 manually.
+          </div>
         </div>
       </div>
     </div>
