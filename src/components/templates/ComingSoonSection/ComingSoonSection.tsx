@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { FC } from "react";
 
 const ComingSoonSection: FC = () => {
@@ -57,18 +58,25 @@ const ComingSoonSection: FC = () => {
               ),
             })}
           </p>
-          {/* TODO: 관련 액션 버튼 추가 */}
-          {/* <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-            <a
-              href="#"
+          <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+            <Link
+              href="https://games.dante.company/pencil-picker"
+              target="_blank"
               className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
-              Get started
-            </a>
-            <a href="#" className="text-sm font-semibold leading-6 text-white">
-              Learn more <span aria-hidden="true">→</span>
-            </a>
-          </div> */}
+              {t("CoomingSoonSection.getStarted")}
+            </Link>
+            <Link
+              href="https://play.google.com/store/apps/details?id=company.dante.games.pencilpicker"
+              target="_blank"
+              className="text-sm font-semibold leading-6 text-white"
+            >
+              {t("CoomingSoonSection.downloadAndroid")}
+            </Link>
+          </div>
+          <div className="mt-2 text-sm font-medium opacity-50">
+            {t("CoomingSoonSection.downloadiOS")}
+          </div>
         </div>
         <div className="mt-16 h-[350px] md:h-[500px] lg:my-8">
           <video

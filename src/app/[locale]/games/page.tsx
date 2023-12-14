@@ -10,8 +10,8 @@ const GamesPage: NextPage = () => {
   return (
     <>
       <HeroSection text="games" />
-      <GamesSection />
       <ComingSoonSection />
+      <GamesSection />
       <NewsletterSection />
     </>
   );

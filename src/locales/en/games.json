@@ -18,8 +18,11 @@
     }
   },
   "CoomingSoonSection": {
-    "title": "<strong>Pencil Picker</strong>, stay tuned! 🎮",
-    "intro": "<strong>Pencil Picker</strong>, which will be Dante Games' first game, is being developed with thoughtfulness to be simple enough for anyone to enjoy, yet not become boring."
+    "title": "<strong>Pencil Picker</strong>\b is just came out! 🎮",
+    "intro": "<strong>Pencil Picker</strong>, which is Dante Games' first game, have developing with thoughtfulness to be simple enough for anyone to enjoy, yet not become boring. Stay tune with me!",
+    "getStarted": "Get Started with Web",
+    "downloadAndroid": "Download for Android",
+    "downloadiOS": "iOS app is coming soon!"
   },
   "NewsletterSection": {
     "heading": "Would you like to get updates?",

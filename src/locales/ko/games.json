@@ -18,8 +18,11 @@
     }
   },
   "CoomingSoonSection": {
-    "title": "<strong>펜슬 피커</strong>, 기대해주세요! 🎮",
-    "intro": "단테 게임즈의 첫 게임이 될 <strong>펜슬 피커</strong>는 누구나 쉽게 즐길 수 있을 정도로 간단하되, 어떻게하면 지루하지 않게 할 수 있을지 고민하며 만들고 있어요."
+    "title": "<strong>펜슬 피커</strong>가 지금 막 출시됐어요! 🎮",
+    "intro": "단테 게임즈의 첫 게임, <strong>펜슬 피커</strong>는 누구나 쉽게 즐길 수 있을 정도로 간단하되, 어떻게하면 지루하지 않게 할 수 있을지 고민하며 만들었어요. 계속해서 살을 붙여나갈 예정입니다!",
+    "getStarted": "지금 웹에서 시작하기",
+    "downloadAndroid": "안드로이드 앱 다운로드",
+    "downloadiOS": "iOS 앱은 곧 출시할 예정이에요!"
   },
   "NewsletterSection": {
     "heading": "소식을 받아보시겠어요?",
