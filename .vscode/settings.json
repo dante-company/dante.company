@@ -6,6 +6,9 @@
   "i18n-ally.theme.annotationBorder": "rgba(153, 153, 153, .8)",
   "i18n-ally.theme.annotationMissing": "#d37070",
   "i18n-ally.theme.annotationMissingBorder": "#d37070",
+  "i18n-ally.regex.usageMatchAppend": [
+    "[^\\w\\d]t\\.rich\\(['\"`]({key})['\"`]"
+  ],
 
   "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   "[json]": {
