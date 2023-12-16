@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from "locales/navigation";
 import { FC } from "react";
 
 const ComingSoonSection: FC = () => {

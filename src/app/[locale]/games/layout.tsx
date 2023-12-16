@@ -1,6 +1,6 @@
-import { getMessages } from "locales/index";
+import { fallbackLocale } from "locales";
 import { Metadata } from "next";
-import { createTranslator } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 interface Props {
   children: React.ReactNode;
@@ -9,9 +9,11 @@ interface Props {
   };
 }
 
-export async function generateMetadata({ params: { locale = "en" } }: Props) {
-  const messages = await getMessages(locale);
-  const t = createTranslator({ locale, messages });
+export async function generateMetadata({
+  params: { locale = fallbackLocale },
+}: Props) {
+  const t = await getTranslations({ locale, namespace: "common" });
+
   return {
     title: "Games",
     description: "Games",
@@ -22,11 +24,6 @@ export async function generateMetadata({ params: { locale = "en" } }: Props) {
   } as Metadata;
 }
 
-export default async function GamesLayout({
-  children,
-  params: { locale },
-}: Props) {
-  const messages = await getMessages(locale);
-
+export default async function GamesLayout({ children }: Props) {
   return <>{children}</>;
 }

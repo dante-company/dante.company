@@ -16,5 +16,9 @@
     "description": "The page you are looking for was moved, removed, renamed or might never existed.",
     "buttonBack": "Go to Home",
     "buttonContact": "Contact me via Email"
+  },
+  "metadata": {
+    "title": "Dante Company",
+    "description": "Dante Company is a solopreneur that offers software development services to domestic and international company while passionately creating projects aligned with own visions."
   }
 }

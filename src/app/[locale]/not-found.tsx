@@ -1,18 +1,11 @@
-"use client";
+import { fallbackLocale } from "locales";
+import { Link } from "locales/navigation";
+import { getLocale, getTranslations } from "next-intl/server";
 
-import { fallbackLocale, getMessages, processLocale } from "locales";
-import { createTranslator } from "next-intl";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-
-const NotFoundPage = () => {
-  const pathname = usePathname();
-  const [_, locale] = pathname.split("/");
-  const processedLocale = processLocale(locale) ?? fallbackLocale;
-  const messages = getMessages(processedLocale);
-  const t = createTranslator({
-    locale: processedLocale,
-    messages,
+const NotFoundPage = async () => {
+  const locale = await getLocale();
+  const t = await getTranslations({
+    locale: locale ?? fallbackLocale,
     namespace: "common",
   });
 
@@ -28,7 +21,7 @@ const NotFoundPage = () => {
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <Link
-            href={`/${processedLocale}`}
+            href="/"
             className="rounded-md bg-blossom-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blossom-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blossom-600"
           >
             {t("404.buttonBack")}

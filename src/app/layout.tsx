@@ -1,6 +1,6 @@
-import { fallbackLocale, getMessages } from "locales/index";
+import { fallbackLocale } from "locales/index";
 import { Metadata } from "next";
-import { NextIntlClientProvider, createTranslator } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
@@ -15,10 +15,10 @@ interface Props {
   children: React.ReactNode;
 }
 
-export async function generateMetadata() {
-  const locale = fallbackLocale;
-  const messages = await getMessages(locale);
-  const t = createTranslator({ locale, messages });
+export async function generateMetadata({
+  params: { locale = fallbackLocale },
+}) {
+  const t = await getTranslations({ locale, namespace: "common" });
 
   return {
     title: {
@@ -65,16 +65,14 @@ export async function generateMetadata() {
   } as Metadata;
 }
 
-export default async function LocaleLayout({ children }: Props) {
+export default async function LocaleLayout(props: Props) {
+  const { children } = props;
   const locale = fallbackLocale;
-  const messages = await getMessages(locale);
 
   return (
     <html lang={locale}>
       <Providers>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <body className={font.className}>{children}</body>
-        </NextIntlClientProvider>
+        <body className={font.className}>{children}</body>
       </Providers>
     </html>
   );

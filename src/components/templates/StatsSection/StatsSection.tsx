@@ -7,18 +7,16 @@ import { useLocale, useTranslations } from "next-intl";
 import { FC } from "react";
 
 const StatsSection: FC = () => {
-  const t = useTranslations("landing");
   const locale = useLocale();
+  const t = useTranslations("landing");
 
   const stats = [
     {
       id: 1,
       name: t("StatsSection.workedDays"),
-      value:
-        // moment().diff(moment("2021-10-12"), "days").toLocaleString() + "일",
-        t("StatsSection.workedDaysValue", {
-          days: moment().diff(moment("2021-10-12"), "days").toLocaleString(),
-        }),
+      value: t("StatsSection.workedDaysValue", {
+        days: moment().diff(moment("2021-10-12"), "days").toLocaleString(),
+      }),
     },
     {
       id: 2,
