@@ -1,6 +1,4 @@
-import { getMessages } from "locales";
 import axios from "axios";
-import { createTranslator } from "next-intl";
 
 const KoreanErrorMessage = {
   "Email not found": "인증번호를 보낸 이메일이 없어요.",
@@ -10,9 +8,6 @@ const KoreanErrorMessage = {
 };
 
 export const getNewsletterErrorMessage = (error: any, locale: string) => {
-  const messages = getMessages(locale);
-  const t = createTranslator({ locale, messages, namespace: "games" });
-
   if (axios.isAxiosError(error)) {
     if (error.response?.data?.message) {
       const errorMessage = error.response.data.message;
@@ -26,5 +21,5 @@ export const getNewsletterErrorMessage = (error: any, locale: string) => {
       return error.response.data.message;
     }
   }
-  return t("NewsletterSection.notificationError");
+  return "Unknown error occurred";
 };
