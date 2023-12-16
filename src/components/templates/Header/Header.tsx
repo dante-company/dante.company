@@ -5,7 +5,7 @@ import {
   fallbackLocale,
   processLocale,
   supportedLocales,
-} from "@locales";
+} from "locales";
 import { useLocale } from "next-intl";
 import Link from "next-intl/link";
 import { usePathname, useRouter } from "next/navigation";

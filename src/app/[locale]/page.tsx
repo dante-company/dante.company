@@ -4,8 +4,8 @@ import {
   StatsSection,
   TimelineSection,
   WelcomeSection,
-} from "@components/templates";
-import FAQSection from "@components/templates/FAQSection";
+} from "components/templates";
+import FAQSection from "components/templates/FAQSection";
 import { NextPage } from "next";
 
 const MainPage: NextPage = () => {

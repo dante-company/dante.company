@@ -1,6 +1,6 @@
 "use client";
 
-import { fallbackLocale, getMessages, processLocale } from "@locales";
+import { fallbackLocale, getMessages, processLocale } from "locales";
 import { createTranslator } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

@@ -7,14 +7,14 @@ import {
   StatsSection,
   TimelineSection,
   WelcomeSection,
-} from "@components/templates";
-import FAQSection from "@components/templates/FAQSection";
+} from "components/templates";
+import FAQSection from "components/templates/FAQSection";
 import {
   Locale,
   fallbackLocale,
   processLocale,
   supportedLocales,
-} from "@locales";
+} from "locales";
 import { NextPage } from "next";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";

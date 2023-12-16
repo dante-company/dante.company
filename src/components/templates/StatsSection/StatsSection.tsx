@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatedTitle } from "@components/atoms";
+import { AnimatedTitle } from "components/atoms";
 import { motion } from "framer-motion";
 import moment from "moment";
 import { useLocale, useTranslations } from "next-intl";

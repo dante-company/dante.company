@@ -3,5 +3,5 @@ declare module "*.svg" {
   export default content;
 }
 
-type Messages = typeof import("@locales/en/index").default;
+type Messages = typeof import("locales/en/index").default;
 declare interface IntlMessages extends Messages {}

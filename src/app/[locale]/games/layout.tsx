@@ -1,4 +1,4 @@
-import { getMessages } from "@locales/index";
+import { getMessages } from "locales/index";
 import { Metadata } from "next";
 import { createTranslator } from "next-intl";
 

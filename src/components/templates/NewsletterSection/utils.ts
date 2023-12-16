@@ -1,4 +1,4 @@
-import { getMessages } from "@locales";
+import { getMessages } from "locales";
 import axios from "axios";
 import { createTranslator } from "next-intl";
 

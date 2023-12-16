@@ -1,5 +1,5 @@
-import { Footer, Header } from "@components/templates";
-import { getMessages, supportedLocales } from "@locales/index";
+import { Footer, Header } from "components/templates";
+import { getMessages, supportedLocales } from "locales/index";
 import classNames from "classnames";
 import { Metadata } from "next";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
