@@ -1,4 +1,4 @@
-import { AnimatedTitle } from "components/atoms";
+import { AnimatedTitle } from "../../atoms";
 import React, { FC } from "react";
 
 const SkillsSection: FC = () => {

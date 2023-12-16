@@ -9,7 +9,6 @@
   "i18n-ally.regex.usageMatchAppend": [
     "[^\\w\\d]t\\.rich\\(['\"`]({key})['\"`]"
   ],
-
   "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features",

@@ -1,9 +1,9 @@
 "use client";
 
-import { Locale } from "locales";
-import { usePathname, useRouter } from "locales/navigation";
+import { Locale } from "../../../locales";
+import { usePathname, useRouter } from "../../../locales/navigation";
 import { useLocale } from "next-intl";
-import { Link } from "locales/navigation";
+import { Link } from "../../../locales/navigation";
 import { FC, useCallback } from "react";
 
 const Header: FC = () => {

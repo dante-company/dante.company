@@ -3,7 +3,7 @@ import {
   GamesSection,
   HeroSection,
   NewsletterSection,
-} from "components/templates";
+} from "../../../components/templates";
 import { NextPage } from "next";
 
 const GamesPage: NextPage = () => {

@@ -1,4 +1,4 @@
-import { API_URL } from "constants/env";
+import { API_URL } from "../constants/env";
 import axios from "axios";
 import NewsletterAPI from "./newsletter";
 

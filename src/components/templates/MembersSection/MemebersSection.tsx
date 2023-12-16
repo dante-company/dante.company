@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatedTitle } from "components/atoms";
+import { AnimatedTitle } from "../../atoms";
 import { useTranslations } from "next-intl";
 import { InstagramSvg, LinkedInSvg } from "./svgs";
 import { FC } from "react";

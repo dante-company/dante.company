@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatedTitle } from "components/atoms";
+import { AnimatedTitle } from "../../atoms";
 import { Disclosure } from "@headlessui/react";
 import {
   EnvelopeIcon,

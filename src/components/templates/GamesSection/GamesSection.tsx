@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatedTitle } from "components/atoms";
+import { AnimatedTitle } from "../../atoms";
 import { CubeIcon, ShareIcon, WifiIcon } from "@heroicons/react/20/solid";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";

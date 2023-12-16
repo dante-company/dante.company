@@ -1,4 +1,4 @@
-import { fallbackLocale } from "locales";
+import { fallbackLocale } from "../../../locales";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 

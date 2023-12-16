@@ -15,7 +15,7 @@
     "jsx": "preserve",
     "incremental": true,
     "plugins": [{ "name": "next" }],
-    "baseUrl": "./src"
+    "baseUrl": "src"
   },
   "include": [
     "next-env.d.ts",
@@ -24,10 +24,5 @@
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules"],
-
-  // For NestJS
-  "emitDecoratorMetadata": true,
-  "experimentalDecorators": true,
-  "strictPropertyInitialization": false
+  "exclude": ["node_modules"]
 }

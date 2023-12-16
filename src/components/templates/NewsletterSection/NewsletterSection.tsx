@@ -1,6 +1,6 @@
 "use client";
 
-import { NewsletterAPI } from "api";
+import { NewsletterAPI } from "../../../api";
 import { ExclamationCircleIcon } from "@heroicons/react/20/solid";
 import { CheckIcon } from "@heroicons/react/24/outline";
 import { AnimatePresence, motion } from "framer-motion";

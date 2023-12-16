@@ -1,5 +1,5 @@
-import { fallbackLocale } from "locales";
-import { Link } from "locales/navigation";
+import { fallbackLocale } from "../../locales";
+import { Link } from "../../locales/navigation";
 import { getLocale, getTranslations } from "next-intl/server";
 
 const NotFoundPage = async () => {

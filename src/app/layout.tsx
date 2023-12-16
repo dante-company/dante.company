@@ -1,4 +1,4 @@
-import { fallbackLocale } from "locales/index";
+import { fallbackLocale } from "../locales/index";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Noto_Sans } from "next/font/google";
