@@ -58,24 +58,28 @@ const ComingSoonSection: FC = () => {
               ),
             })}
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
             <Link
               href="https://games.dante.company/pencil-picker"
               target="_blank"
-              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               {t("CoomingSoonSection.getStarted")}
             </Link>
             <Link
               href="https://play.google.com/store/apps/details?id=company.dante.games.pencilpicker"
               target="_blank"
-              className="text-sm font-semibold leading-6 text-white"
+              className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               {t("CoomingSoonSection.downloadAndroid")}
             </Link>
-          </div>
-          <div className="mt-2 text-sm font-medium opacity-50">
-            {t("CoomingSoonSection.downloadiOS")}
+            <Link
+              href="https://apps.apple.com/kr/app/pencil-picker/id6474534592"
+              target="_blank"
+              className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              {t("CoomingSoonSection.downloadiOS")}
+            </Link>
           </div>
         </div>
         <div className="mt-16 h-[350px] md:h-[500px] lg:my-8">
