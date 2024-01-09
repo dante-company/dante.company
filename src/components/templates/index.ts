@@ -1,4 +1,4 @@
-import ComingSoonSection from "./ComingSoonSection";
+import PencilPickerSection from "./PencilPickerSection";
 import Footer from "./Footer";
 import GamesSection from "./GamesSection";
 import Header from "./Header";
@@ -11,7 +11,7 @@ import TimelineSection from "./TimelineSection";
 import WelcomeSection from "./WelcomSection";
 
 export {
-  ComingSoonSection,
+  PencilPickerSection,
   Footer,
   GamesSection,
   Header,

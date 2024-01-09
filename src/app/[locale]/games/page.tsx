@@ -1,5 +1,5 @@
 import {
-  ComingSoonSection,
+  PencilPickerSection,
   GamesSection,
   HeroSection,
   NewsletterSection,
@@ -10,7 +10,7 @@ const GamesPage: NextPage = () => {
   return (
     <>
       <HeroSection text="games" />
-      <ComingSoonSection />
+      <PencilPickerSection />
       <GamesSection />
       <NewsletterSection />
     </>

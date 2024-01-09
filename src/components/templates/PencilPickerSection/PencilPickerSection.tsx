@@ -1,11 +1,12 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "../../../locales/navigation";
 import { FC } from "react";
 
-const ComingSoonSection: FC = () => {
+const PencilPickerSection: FC = () => {
   const t = useTranslations("games");
+  const locale = useLocale();
 
   return (
     <div className="mx-auto max-w-7xl py-16 sm:px-6 sm:py-20 lg:px-8">
@@ -41,7 +42,7 @@ const ComingSoonSection: FC = () => {
         </svg>
         <div className="flex flex-col justify-center text-center lg:mx-0 lg:max-w-md lg:flex-auto lg:py-32 lg:text-left xl:max-w-lg">
           <h2 className="text-3xl font-bold tracking-tight text-black dark:text-white sm:text-4xl">
-            {t.rich("CoomingSoonSection.title", {
+            {t.rich("PencilPickerSection.title", {
               strong: (children) => (
                 <strong className="text-twilight-600 dark:text-blossom">
                   {children}
@@ -50,7 +51,7 @@ const ComingSoonSection: FC = () => {
             })}
           </h2>
           <p className="mt-6 break-keep text-lg leading-8 text-gray-700 dark:text-gray-300">
-            {t.rich("CoomingSoonSection.intro", {
+            {t.rich("PencilPickerSection.intro", {
               strong: (children) => (
                 <strong className="text-twilight-600 dark:text-blossom">
                   {children}
@@ -58,27 +59,36 @@ const ComingSoonSection: FC = () => {
               ),
             })}
           </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+          <div className="mt-10 grid grid-cols-3 gap-4 text-center lg:justify-start">
             <Link
               href="https://games.dante.company/pencil-picker"
               target="_blank"
-              className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="flex items-center justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm transition hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white dark:bg-blossom-600 dark:text-white dark:hover:bg-blossom-700"
             >
-              {t("CoomingSoonSection.getStarted")}
+              {t("PencilPickerSection.getStarted")}
             </Link>
             <Link
               href="https://play.google.com/store/apps/details?id=company.dante.games.pencilpicker"
               target="_blank"
-              className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="flex items-center justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm transition hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white dark:bg-blossom-600 dark:text-white dark:hover:bg-blossom-700"
             >
-              {t("CoomingSoonSection.downloadAndroid")}
+              {t("PencilPickerSection.downloadAndroid")}
             </Link>
             <Link
               href="https://apps.apple.com/kr/app/pencil-picker/id6474534592"
               target="_blank"
-              className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="flex items-center justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm transition hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white dark:bg-blossom-600 dark:text-white dark:hover:bg-blossom-700"
             >
-              {t("CoomingSoonSection.downloadiOS")}
+              {t("PencilPickerSection.downloadiOS")}
+            </Link>
+          </div>
+          <div className="mt-4">
+            <Link
+              href={`https://games.dante.company/pencil-picker/${locale}/private-policy.html`}
+              target="_blank"
+              className="rounded-md px-2 py-1 text-xs font-medium text-gray-300 hover:bg-white/10"
+            >
+              {t("PencilPickerSection.privatePrivacy")}
             </Link>
           </div>
         </div>
@@ -98,4 +108,4 @@ const ComingSoonSection: FC = () => {
   );
 };
 
-export default ComingSoonSection;
+export default PencilPickerSection;
