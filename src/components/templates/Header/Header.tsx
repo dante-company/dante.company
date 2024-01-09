@@ -19,7 +19,7 @@ const Header: FC = () => {
   );
 
   return (
-    <div className="fixed inset-x-0 top-0 z-header flex items-center justify-between px-4 pt-2 text-white md:px-6 md:pt-4">
+    <div className="fixed inset-x-0 top-0 z-header flex items-center justify-between px-4 pt-2 text-black dark:text-white md:px-6 md:pt-4">
       <div className="flex gap-6">
         <Link href="/" className="hidden font-bold tracking-tighter md:block">
           DANTE COMPANY
