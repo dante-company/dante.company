@@ -1,7 +1,13 @@
-import { redirect } from "next/navigation";
+"use client";
 
-const NotFoundPage = () => {
-  redirect("/");
-};
+import Error from "next/error";
 
-export default NotFoundPage;
+export default function NotFound() {
+  return (
+    <html lang="en">
+      <body>
+        <Error statusCode={404} />
+      </body>
+    </html>
+  );
+}
