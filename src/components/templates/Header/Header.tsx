@@ -1,10 +1,10 @@
 "use client";
 
-import { Locale } from "../../../locales";
-import { usePathname, useRouter } from "../../../locales/navigation";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 import { useLocale } from "next-intl";
-import { Link } from "../../../locales/navigation";
 import { FC, useCallback } from "react";
+import { Locale } from "../../../locales";
+import { Link, usePathname, useRouter } from "../../../locales/navigation";
 
 const Header: FC = () => {
   const locale = useLocale();
@@ -36,6 +36,12 @@ const Header: FC = () => {
               <div className="absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-twilight dark:bg-blossom" />
             )}
             <Link href="/games">Games</Link>
+          </li>
+          <li className="relative">
+            <Link href="https://blog.dante.company">
+              Blog
+              <ArrowTopRightOnSquareIcon className="ml-1 inline-block h-4 w-4" />
+            </Link>
           </li>
         </ul>
       </div>
