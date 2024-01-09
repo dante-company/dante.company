@@ -1,9 +1,10 @@
-import { fallbackLocale } from "../locales/index";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Noto_Sans } from "next/font/google";
+import { fallbackLocale } from "../locales/index";
 import "./globals.css";
 import Providers from "./providers";
+import Scripts from "./scripts";
 
 const font = Noto_Sans({
   weight: ["400", "500", "600", "700"],
@@ -54,28 +55,6 @@ export async function generateMetadata({
         },
       ],
     },
-    scripts: [
-      {
-        // Google Adsense
-        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3034636508464066",
-        async: true,
-        crossorigin: "anonymous",
-      },
-      // Google Analytics
-      {
-        src: "https://www.googletagmanager.com/gtag/js?id=G-CG890MCS5N",
-        async: true,
-      },
-      {
-        innerHTML: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-    
-          gtag('config', 'G-CG890MCS5N');
-        `,
-      },
-    ],
   } as Metadata;
 }
 
@@ -85,6 +64,9 @@ export default async function LocaleLayout(props: Props) {
 
   return (
     <html lang={locale}>
+      <head>
+        <Scripts />
+      </head>
       <Providers>
         <body className={font.className}>{children}</body>
       </Providers>
