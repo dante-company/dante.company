@@ -3,13 +3,6 @@ import Script from "next/script";
 const Scripts = () => {
   return (
     <>
-      {/* Google Adsense */}
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3034636508464066"
-        crossOrigin="anonymous"
-      />
-
       {/* Google Analytics */}
       <Script
         async
