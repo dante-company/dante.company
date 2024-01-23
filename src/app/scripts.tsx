@@ -35,6 +35,12 @@ const Scripts = () => {
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6700025991079512"
         crossOrigin="anonymous"
       />
+
+      {/* Naver Search Advisor */}
+      <meta
+        name="naver-site-verification"
+        content="a583ae65eeea2a23cfd4b5180450d7c87cb86b0c"
+      />
     </>
   );
 };
